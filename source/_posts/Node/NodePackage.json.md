@@ -1,6 +1,6 @@
 ---
 title:  package.json详解
-date: 2018-11-11 13:16:28
+date: 2020-11-11 13:16:28
 layout: post
 categories: Node
 tags: Npm

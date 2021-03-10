@@ -1,6 +1,6 @@
 ---
 title: 使用Gulp4.0搭建ts学习环境
-date: 2019-07-20 16:25:42
+date: 2020-07-20 16:25:42
 layout: post
 categories: Webpack
 tags: TypeScript

@@ -125,7 +125,7 @@ theme: matery
 deploy:
   type: git
   repo: git@github.com:LuyiaGoe/LuyiaGoe.github.io.git
-  repo: git@gitee.com:LuyiaGoe/LuyiaGoe.gitee.io.git
+  # repo: git@gitee.com:LuyiaGoe/LuyiaGoe.gitee.io.git
   branch: master
 
 # Rss

@@ -1,6 +1,6 @@
 ---
 title: 如何在Node和浏览器控制台中打印彩色文字
-date: 2020-01-09 13:11:43
+date: 2020-11-09 13:11:43
 layout: post
 categories: Node
 tags: Node

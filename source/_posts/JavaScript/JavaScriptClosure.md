@@ -1,6 +1,6 @@
 ---
 title: JavaScript闭包详解
-date: 2018-09-14 13:16:28
+date: 2020-09-14 13:16:28
 layout: post
 categories: JavaScript
 tags: Closure
