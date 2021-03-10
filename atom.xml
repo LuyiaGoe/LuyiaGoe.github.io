@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>LuyiaGoe&#39;s Blog</title>
+  
+  <subtitle>Blog for Recording</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://luyiagoe.cn/"/>
+  <updated>2021-03-10T03:14:27.153Z</updated>
+  <id>https://luyiagoe.cn/</id>
+  
+  <author>
+    <name>LuyiaGoe</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript变量转换</title>
+    <link href="https://luyiagoe.cn/2021/03/09/JavaScript/JavaScriptValueChange/"/>
+    <id>https://luyiagoe.cn/2021/03/09/JavaScript/JavaScriptValueChange/</id>
+    <published>2021-03-09T10:48:55.000Z</published>
+    <updated>2021-03-10T03:14:27.153Z</updated>
+    
+    <summary type="html">
+    
+      JavaScript变量转换
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://LuyiaGoe.cn/categories/JavaScript/"/>
+    
+    
+      <category term="Variable" scheme="https://LuyiaGoe.cn/tags/Variable/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>浏览器异步加载JS的方法</title>
+    <link href="https://luyiagoe.cn/2021/03/01/HTML&amp;CSS/HTMLAsyncLoadScript/"/>
+    <id>https://luyiagoe.cn/2021/03/01/HTML&amp;CSS/HTMLAsyncLoadScript/</id>
+    <published>2021-03-01T02:31:07.000Z</published>
+    <updated>2021-03-10T03:07:46.601Z</updated>
+    
+    <summary type="html">
+    
+      浏览器异步加载JS有哪些方法？defer和async有什么区别？module加载是怎么样的？
+    
+    </summary>
+    
+    
+      <category term="HTML" scheme="https://LuyiaGoe.cn/categories/HTML/"/>
+    
+    
+      <category term="Async" scheme="https://LuyiaGoe.cn/tags/Async/"/>
+    
+      <category term="JavaScript" scheme="https://LuyiaGoe.cn/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1ink与@import的区别</title>
+    <link href="https://luyiagoe.cn/2021/02/13/HTML&amp;CSS/CSSImport/"/>
+    <id>https://luyiagoe.cn/2021/02/13/HTML&amp;CSS/CSSImport/</id>
+    <published>2021-02-13T05:16:28.000Z</published>
+    <updated>2021-03-10T03:07:46.601Z</updated>
+    
+    <summary type="html">
+    
+      1ink与@import的区别
+    
+    </summary>
+    
+    
+      <category term="CSS" scheme="https://LuyiaGoe.cn/categories/CSS/"/>
+    
+    
+      <category term="CSS" scheme="https://LuyiaGoe.cn/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Node爬取大批量文件</title>
+    <link href="https://luyiagoe.cn/2021/01/02/Node/NodeSpiderBundleData/"/>
+    <id>https://luyiagoe.cn/2021/01/02/Node/NodeSpiderBundleData/</id>
+    <published>2021-01-02T02:16:47.000Z</published>
+    <updated>2021-03-10T03:19:14.526Z</updated>
+    
+    <summary type="html">
+    
+      有个朋友在搞留学工作室，经常访问的一个网站叫留学者指南，然而每次都要去访问该网站，显得极其不专业。于是托俺帮忙写脚本去爬他家的东西，我观察了下，这次，我们要爬的东西就有点多了——大概就20多万个文件吧~~~
+    
+    </summary>
+    
+    
+      <category term="Node" scheme="https://LuyiaGoe.cn/categories/Node/"/>
+    
+    
+      <category term="Spider" scheme="https://LuyiaGoe.cn/tags/Spider/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue源码解读（一）</title>
+    <link href="https://luyiagoe.cn/2020/12/29/Vue/VueSourceCodeRead1/"/>
+    <id>https://luyiagoe.cn/2020/12/29/Vue/VueSourceCodeRead1/</id>
+    <published>2020-12-29T10:48:55.000Z</published>
+    <updated>2021-03-10T03:16:28.209Z</updated>
+    
+    <summary type="html">
+    
+      Vue源码解读（一）
+    
+    </summary>
+    
+    
+      <category term="Vue" scheme="https://LuyiaGoe.cn/categories/Vue/"/>
+    
+    
+      <category term="Vue" scheme="https://LuyiaGoe.cn/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Node简单爬虫</title>
+    <link href="https://luyiagoe.cn/2020/12/29/Node/NodeSimpleSpider/"/>
+    <id>https://luyiagoe.cn/2020/12/29/Node/NodeSimpleSpider/</id>
+    <published>2020-12-29T05:16:28.000Z</published>
+    <updated>2021-03-10T03:15:41.126Z</updated>
+    
+    <summary type="html">
+    
+      最近一直在追火星的一本书，然后每次都要去网站看，感觉很麻烦，于是，想起用爬虫爬取章节，务实排，说干就干！
+    
+    </summary>
+    
+    
+      <category term="Node" scheme="https://LuyiaGoe.cn/categories/Node/"/>
+    
+    
+      <category term="Spider" scheme="https://LuyiaGoe.cn/tags/Spider/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue的响应式原理</title>
+    <link href="https://luyiagoe.cn/2020/12/25/Vue/VueBottomImplementation/"/>
+    <id>https://luyiagoe.cn/2020/12/25/Vue/VueBottomImplementation/</id>
+    <published>2020-12-25T05:16:28.000Z</published>
+    <updated>2021-03-10T03:16:16.999Z</updated>
+    
+    <summary type="html">
+    
+      Vue的响应式原理
+    
+    </summary>
+    
+    
+      <category term="Vue" scheme="https://LuyiaGoe.cn/categories/Vue/"/>
+    
+    
+      <category term="Vue" scheme="https://LuyiaGoe.cn/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mock.js与Rap2模拟接口</title>
+    <link href="https://luyiagoe.cn/2020/12/22/Node/MockByRap2/"/>
+    <id>https://luyiagoe.cn/2020/12/22/Node/MockByRap2/</id>
+    <published>2020-12-22T09:05:46.000Z</published>
+    <updated>2021-03-10T03:15:24.197Z</updated>
+    
+    <summary type="html">
+    
+      利用基于Mock.js的Rap2模拟前端请求数据
+    
+    </summary>
+    
+    
+      <category term="Node" scheme="https://LuyiaGoe.cn/categories/Node/"/>
+    
+    
+      <category term="Mock" scheme="https://LuyiaGoe.cn/tags/Mock/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>窗口间的通信与iframe跨域</title>
+    <link href="https://luyiagoe.cn/2020/12/21/JavaScript/JavaScriptIframeCrossOrigin/"/>
+    <id>https://luyiagoe.cn/2020/12/21/JavaScript/JavaScriptIframeCrossOrigin/</id>
+    <published>2020-12-21T10:47:50.000Z</published>
+    <updated>2021-03-10T03:07:46.601Z</updated>
+    
+    <summary type="html">
+    
+      窗口间的该怎么通讯，iframe跨域该怎么解决？
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://LuyiaGoe.cn/categories/JavaScript/"/>
+    
+    
+      <category term="iframe" scheme="https://LuyiaGoe.cn/tags/iframe/"/>
+    
+      <category term="postMessage" scheme="https://LuyiaGoe.cn/tags/postMessage/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>实现call、apply、bind</title>
+    <link href="https://luyiagoe.cn/2020/12/17/JavaScript/JavaScriptCall%E3%80%81apply%E3%80%81bindPolyfill2/"/>
+    <id>https://luyiagoe.cn/2020/12/17/JavaScript/JavaScriptCall%E3%80%81apply%E3%80%81bindPolyfill2/</id>
+    <published>2020-12-17T02:16:46.000Z</published>
+    <updated>2021-03-10T03:07:46.601Z</updated>
+    
+    <summary type="html">
+    
+      实现call、apply、bind
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://LuyiaGoe.cn/categories/JavaScript/"/>
+    
+    
+      <category term="Polyfill" scheme="https://LuyiaGoe.cn/tags/Polyfill/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一种实现call、apply、bind的方法</title>
+    <link href="https://luyiagoe.cn/2020/12/16/JavaScript/JavaScriptCall%E3%80%81apply%E3%80%81bindPolyfill/"/>
+    <id>https://luyiagoe.cn/2020/12/16/JavaScript/JavaScriptCall%E3%80%81apply%E3%80%81bindPolyfill/</id>
+    <published>2020-12-16T07:18:51.000Z</published>
+    <updated>2021-03-10T03:07:46.601Z</updated>
+    
+    <summary type="html">
+    
+      面试官：请你手动实现一个call、apply、bind
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://LuyiaGoe.cn/categories/JavaScript/"/>
+    
+    
+      <category term="Polyfill" scheme="https://LuyiaGoe.cn/tags/Polyfill/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS选择符的权重</title>
+    <link href="https://luyiagoe.cn/2020/12/13/HTML&amp;CSS/CSSSelector/"/>
+    <id>https://luyiagoe.cn/2020/12/13/HTML&amp;CSS/CSSSelector/</id>
+    <published>2020-12-13T05:16:28.000Z</published>
+    <updated>2021-03-10T03:07:46.601Z</updated>
+    
+    <summary type="html">
+    
+      CSS选择符的权重
+    
+    </summary>
+    
+    
+      <category term="CSS" scheme="https://LuyiaGoe.cn/categories/CSS/"/>
+    
+    
+      <category term="CSS" scheme="https://LuyiaGoe.cn/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS样式之内容居中方法</title>
+    <link href="https://luyiagoe.cn/2020/11/14/HTML&amp;CSS/CSSInCenter/"/>
+    <id>https://luyiagoe.cn/2020/11/14/HTML&amp;CSS/CSSInCenter/</id>
+    <published>2020-11-14T10:48:55.000Z</published>
+    <updated>2021-03-10T03:07:46.601Z</updated>
+    
+    <summary type="html">
+    
+      CSS样式设置使html内容水平居中和垂直居中的方法
+    
+    </summary>
+    
+    
+      <category term="CSS" scheme="https://LuyiaGoe.cn/categories/CSS/"/>
+    
+    
+      <category term="CSS" scheme="https://LuyiaGoe.cn/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>package.json详解</title>
+    <link href="https://luyiagoe.cn/2020/11/11/Node/NodePackage.json/"/>
+    <id>https://luyiagoe.cn/2020/11/11/Node/NodePackage.json/</id>
+    <published>2020-11-11T05:16:28.000Z</published>
+    <updated>2021-03-10T03:15:35.404Z</updated>
+    
+    <summary type="html">
+    
+      package.json详解
+    
+    </summary>
+    
+    
+      <category term="Node" scheme="https://LuyiaGoe.cn/categories/Node/"/>
+    
+    
+      <category term="Npm" scheme="https://LuyiaGoe.cn/tags/Npm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Object原型梳理</title>
+    <link href="https://luyiagoe.cn/2020/11/11/JavaScript/JavaScriptObjectPrototype/"/>
+    <id>https://luyiagoe.cn/2020/11/11/JavaScript/JavaScriptObjectPrototype/</id>
+    <published>2020-11-11T04:21:12.000Z</published>
+    <updated>2021-03-10T03:07:46.601Z</updated>
+    
+    <summary type="html">
+    
+      最近我建议你读Vue框架的源码，你说你看不懂？什么？Object的方法不会？好吧，来，先来恶补一波Object原型吧~
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://LuyiaGoe.cn/categories/JavaScript/"/>
+    
+    
+      <category term="Object" scheme="https://LuyiaGoe.cn/tags/Object/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何在Node和浏览器控制台中打印彩色文字</title>
+    <link href="https://luyiagoe.cn/2020/11/09/Node/NodeColorfulOutput/"/>
+    <id>https://luyiagoe.cn/2020/11/09/Node/NodeColorfulOutput/</id>
+    <published>2020-11-09T05:11:43.000Z</published>
+    <updated>2021-03-10T03:15:21.836Z</updated>
+    
+    <summary type="html">
+    
+      看着项目运行时打印出来的彩色文字，我突然意识到这些cli工具都是由前端写的，那么这些彩色打印是怎么实现的呢？
+    
+    </summary>
+    
+    
+      <category term="Node" scheme="https://LuyiaGoe.cn/categories/Node/"/>
+    
+    
+      <category term="Node" scheme="https://LuyiaGoe.cn/tags/Node/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS布局模型详细介绍</title>
+    <link href="https://luyiagoe.cn/2020/10/20/HTML&amp;CSS/CSSLayoutModel/"/>
+    <id>https://luyiagoe.cn/2020/10/20/HTML&amp;CSS/CSSLayoutModel/</id>
+    <published>2020-10-20T05:16:28.000Z</published>
+    <updated>2021-03-10T03:07:46.601Z</updated>
+    
+    <summary type="html">
+    
+      CSS布局类型详细介绍与举例说明
+    
+    </summary>
+    
+    
+      <category term="CSS" scheme="https://LuyiaGoe.cn/categories/CSS/"/>
+    
+    
+      <category term="CSS" scheme="https://LuyiaGoe.cn/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>字符串拼接性能优化</title>
+    <link href="https://luyiagoe.cn/2020/10/09/JavaScript/JavaScriptStringBuffer/"/>
+    <id>https://luyiagoe.cn/2020/10/09/JavaScript/JavaScriptStringBuffer/</id>
+    <published>2020-10-09T10:18:06.000Z</published>
+    <updated>2021-03-10T03:07:46.616Z</updated>
+    
+    <summary type="html">
+    
+      在Java中，对大量字符串处理时存在StringBuilder、StringBuffer来进行优化，那么JavaScript的String是否也能进行优化呢？
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://LuyiaGoe.cn/categories/JavaScript/"/>
+    
+    
+      <category term="String" scheme="https://LuyiaGoe.cn/tags/String/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript之函数尾调用与函数尾递归</title>
+    <link href="https://luyiagoe.cn/2020/09/21/JavaScript/JavaScripitFunctionTail-Call/"/>
+    <id>https://luyiagoe.cn/2020/09/21/JavaScript/JavaScripitFunctionTail-Call/</id>
+    <published>2020-09-21T08:25:19.000Z</published>
+    <updated>2021-03-10T03:07:46.601Z</updated>
+    
+    <summary type="html">
+    
+      偶然重新学习ES6，发现原来在函数方面还有添加尾调用这个特性，尾调用可以减少一次函数调用帧的生成，而众所周知函数递归存在一个内存消耗的问题，如果把尾调用加入到递归中会怎么样呢......
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://LuyiaGoe.cn/categories/JavaScript/"/>
+    
+    
+      <category term="Function" scheme="https://LuyiaGoe.cn/tags/Function/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript闭包详解</title>
+    <link href="https://luyiagoe.cn/2020/09/14/JavaScript/JavaScriptClosure/"/>
+    <id>https://luyiagoe.cn/2020/09/14/JavaScript/JavaScriptClosure/</id>
+    <published>2020-09-14T05:16:28.000Z</published>
+    <updated>2021-03-10T03:13:57.249Z</updated>
+    
+    <summary type="html">
+    
+      javascript闭包原理详解与举例
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://LuyiaGoe.cn/categories/JavaScript/"/>
+    
+    
+      <category term="Closure" scheme="https://LuyiaGoe.cn/tags/Closure/"/>
+    
+  </entry>
+  
+</feed>

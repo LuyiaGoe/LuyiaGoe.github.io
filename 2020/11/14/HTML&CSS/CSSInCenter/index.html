@@ -1,0 +1,1256 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="CSS样式之内容居中方法, Blog">
+    <meta name="description" content="Looking for right direction">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>CSS样式之内容居中方法 | LuyiaGoe&#39;s Blog</title>
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/css/my.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/jquery/jquery.min.js"></script>
+    
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="atom.xml" title="LuyiaGoe's Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="../../../../../index.html" class="waves-effect waves-light">
+                    
+                    <img src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">LuyiaGoe's Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">LuyiaGoe's Blog</div>
+        <div class="logo-desc">
+            
+            Looking for right direction
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/LuyiaGoe/LuyiaGoe.github.io/fork" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/LuyiaGoe/LuyiaGoe.github.io/fork" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '../../../../../index.html';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/medias/featureimages/8.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">CSS样式之内容居中方法</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+        
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    .toc-fixed .toc-link::before{
+        position: fixed!important;/*当toc的位置改为fixed时，.toc-link::before也要改为fixed*/
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="../../../../../tags/CSS/">
+                                <span class="chip bg-color">CSS</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="../../../../../categories/CSS/" class="post-category">
+                                CSS
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-11-14
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="水平居中"><a href="#水平居中" class="headerlink" title="水平居中"></a>水平居中</h3><p>HTML中要实现某一内容水平居中显示，要通过设置css样式来实现，主要分为<strong>行内元素</strong>和<strong>块状元素</strong>两种情况，<strong>块状元素</strong>又可分为<strong>块状定宽</strong>与<strong>块状不定宽</strong>两种情况，接下来依次介绍分析。</p>
+<h4 id="行内元素"><a href="#行内元素" class="headerlink" title="行内元素"></a>行内元素</h4><p>像 a、span、i 这类元素叫做行内元素，<strong>文本</strong>和<strong>图片</strong>也是行内元素。行内元素水平居中方法简单，只需要给行内元素的<strong>父元素</strong>设置 <code>text-align: center;</code> css样式就内实现内容水平居中，例如：
+html:</p>
+<pre><code class="highlight html"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span> = <span class="string">"txt"</span>&gt;</span>居中内容<span class="tag">&lt;/<span class="name">div</span>&gt;</span></code></pre>
+
+<p>css:</p>
+<pre><code class="highlight css"><span class="selector-class">.txt</span> {
+	<span class="attribute">text-align</span>: center;
+}</code></pre>
+
+<p>文本内容的<strong>父元素</strong>就是 <code>div</code> ，这样就内实现水平居中，效果如下：</p>
+<div align="center"><b>居中内容</b></div>
+
+<h4 id="块状定宽元素"><a href="#块状定宽元素" class="headerlink" title="块状定宽元素"></a>块状定宽元素</h4><p>常见块状元素有 div, p, h 等，定宽即为其设置固定宽度值 <code>width</code>，这时我们可以为元素设置 <code>margin-left</code> 和 <code>margin-right</code> 来实现水平居中，也可以简写为 <code>margin: 0 auto;</code>，例如：
+html:</p>
+<pre><code class="highlight html"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span> = <span class="string">"txt"</span>&gt;</span>居中内容<span class="tag">&lt;/<span class="name">div</span>&gt;</span></code></pre>
+
+<p>css:</p>
+<pre><code class="highlight css"><span class="selector-class">.txt</span> {
+	<span class="attribute">width</span>: <span class="number">100px</span>;
+	<span class="attribute">margin</span>: <span class="number">10px</span> auto;
+}</code></pre>
+
+<p>实现效果如下：</p>
+<div align="center"><b>居中内容</b></div>
+
+<h4 id="块状不定宽"><a href="#块状不定宽" class="headerlink" title="块状不定宽"></a>块状不定宽</h4><p>有时候我们不能限制块状元素的宽度，就是块状不定宽元素，主要有三种方法，接下来一次介绍。</p>
+<h5 id="1、加入-table-标签"><a href="#1、加入-table-标签" class="headerlink" title="1、加入 table 标签"></a>1、加入 table 标签</h5><p>利用 table 标签的<strong>长度自适应性</strong>，长度根据内容自动调整，然后通过设置 <code>margin: auto;</code> 实现水平居中，例如：
+html:</p>
+<pre><code class="highlight html"><span class="tag">&lt;<span class="name">table</span>&gt;</span>
+	<span class="tag">&lt;<span class="name">tbody</span>&gt;</span>
+		<span class="tag">&lt;<span class="name">tr</span>&gt;</span>
+			<span class="tag">&lt;<span class="name">td</span>&gt;</span>
+			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span> = <span class="string">"txt"</span>&gt;</span>居中内容<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+			<span class="tag">&lt;/<span class="name">td</span>&gt;</span>
+		<span class="tag">&lt;/<span class="name">tr</span>&gt;</span>
+	<span class="tag">&lt;/<span class="name">tbody</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">table</span>&gt;</span></code></pre>
+
+<p>css:</p>
+<pre><code class="highlight css"><span class="selector-class">.txt</span> {
+	<span class="attribute">margin</span>: auto;
+}</code></pre>
+
+<p>效果如下：</p>
+<div align="center"><b>居中内容</b></div>
+
+<h5 id="2、设置为行内元素"><a href="#2、设置为行内元素" class="headerlink" title="2、设置为行内元素"></a>2、设置为行内元素</h5><p>就是通过设置 <code>display: inline;</code> 将块状元素设置为<strong>行内元素</strong>，然后就是像行内元素一样设置 <code>text-align: center;</code> 来是内容水平居中，例如：
+html:</p>
+<pre><code class="highlight html"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span> = <span class="string">"txt"</span>&gt;</span>居中内容<span class="tag">&lt;/<span class="name">div</span>&gt;</span></code></pre>
+
+<p>css:</p>
+<pre><code class="highlight css"><span class="selector-class">.txt</span> {
+	<span class="attribute">display</span>: inline;
+	<span class="attribute">text-align</span>: center;
+}</code></pre>
+
+<p>效果为：</p>
+<div align="center"><b>居中内容</b></div>
+
+<p><strong>注：</strong></p>
+<blockquote>
+<p><strong>使用这种方法虽然可以不用像table增加无语义标签，但是改变了display，所以会少了一些功能，例如不能设置宽度。</strong></p>
+</blockquote>
+<h5 id="3、设置浮动和相对定位"><a href="#3、设置浮动和相对定位" class="headerlink" title="3、设置浮动和相对定位"></a>3、设置浮动和相对定位</h5><p>这种方法设置就相对复杂，同时设置<strong>浮动</strong>和<strong>相对定位</strong>来实现元素的水平居中。
+首先设置<strong>父元素</strong>：</p>
+<pre><code class="highlight css"><span class="selector-tag">float</span>: <span class="selector-tag">left</span>;
+<span class="selector-tag">position</span>: <span class="selector-tag">relative</span>;
+<span class="selector-tag">left</span>: 50%;</code></pre>
+
+<p>然后设置<strong>子元素</strong>：</p>
+<pre><code class="highlight css"><span class="selector-tag">position</span>: <span class="selector-tag">relative</span>;
+<span class="selector-tag">left</span>: <span class="selector-tag">-50</span>%;</code></pre>
+
+<p>通过代码应该好理解，就是通过<strong>50%</strong>那个关键位置来实现水平居中效果，因为<strong>50%</strong>是界面的中央位置，将父元素右移，直到左边框移到中线位置，在将子元素向左移，这样子元素不就居中了吗。</p>
+<p>这里要<strong>注意</strong>的是分别设置<strong>父元素</strong>的 <code>50%</code> 和<strong>子元素</strong>的 <code>-50%</code>。
+实现效果如下：</p>
+<div align="center"><b>居中内容</b></div>
+
+<h3 id="垂直居中"><a href="#垂直居中" class="headerlink" title="垂直居中"></a>垂直居中</h3><p>说完水平居中接着说垂直居中，这里主要又分为两种情况：<strong>父元素高度确定的单行文本</strong> 和<strong>父元素高度确定的多行文本</strong>。</p>
+<h4 id="单行文本"><a href="#单行文本" class="headerlink" title="单行文本"></a>单行文本</h4><p>对于<strong>父元素</strong>高度确定的单行文本，可以通过设置<strong>父元素</strong>的 <code>height</code> 和 <code>line-height</code> 高度一致来实现。</p>
+<p>这里可以这样理解，<code>height</code> 是元素的高度，例如文本字体的高度，<code>line-height</code> 是行高，例如文本的行间距，一行文本中，行间距被<strong>分为两部分</strong>，分别位于这行文本的<strong>顶部</strong>和<strong>底部</strong>（因为行间距是两行之间的距离），所以设置 <code>height</code> 和 <code>line-height</code> <strong>一样大</strong>的话，<code>line-height</code> 就被均分为两部分，分别位于元素顶部和底部，这样中间设置为 <code>height</code> 的元素不就实现<strong>垂直居中</strong>了吗 ^_^ .</p>
+<p>例如：
+html:</p>
+<pre><code class="highlight html"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span> = <span class="string">"txt"</span>&gt;</span>居中内容<span class="tag">&lt;/<span class="name">div</span>&gt;</span></code></pre>
+
+<p>css:</p>
+<pre><code class="highlight css"><span class="selector-class">.txt</span> {
+	<span class="attribute">height</span>: <span class="number">200px</span>;
+	<span class="attribute">line-height</span>: <span class="number">200px</span>;
+}</code></pre>
+
+<p>效果如下：</p>
+<pre>
+
+
+居中内容
+
+
+
+</pre>
+
+<blockquote>
+<p><strong>这里需要注意的是关键词“单行文本”，如果使用这种方法但是一行文本超过宽度限制的话，某些内容就会脱离元素块，子元素有多行的话，这几行就会并排居中，并保持设置的行高。</strong></p>
+</blockquote>
+<h4 id="多行文本"><a href="#多行文本" class="headerlink" title="多行文本"></a>多行文本</h4><p>对于父元素高度确定的<strong>文本</strong>和<strong>图片</strong>等内容设置垂直居中，主要有两种方法。</p>
+<h5 id="1、使用-table-标签"><a href="#1、使用-table-标签" class="headerlink" title="1、使用 table 标签"></a>1、使用 table 标签</h5><p>对元素使用<strong>table</strong>标签，包括 tbody，tr，td，然后对父元素设置 <code>vertical-align: middle;</code> 样式，就能使 <code>inline-block</code> 类型的子元素垂直居中显示。</p>
+<p>因为 td 标签<strong>默认</strong>设置了 <code>vertical-align: middle</code>，所以也可以不用单独设置 <code>vertical-align</code>。
+例如：
+html:</p>
+<pre><code class="highlight html"><span class="tag">&lt;<span class="name">table</span>&gt;</span>
+	<span class="tag">&lt;<span class="name">tbody</span>&gt;</span>
+		<span class="tag">&lt;<span class="name">tr</span>&gt;</span>
+			<span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"txt"</span>&gt;</span>
+				<span class="tag">&lt;<span class="name">p</span>&gt;</span>居中内容<span class="tag">&lt;/<span class="name">p</span>&gt;</span>
+				<span class="tag">&lt;<span class="name">p</span>&gt;</span>居中内容<span class="tag">&lt;/<span class="name">p</span>&gt;</span>
+				<span class="tag">&lt;<span class="name">p</span>&gt;</span>居中内容<span class="tag">&lt;/<span class="name">p</span>&gt;</span>
+			<span class="tag">&lt;/<span class="name">td</span>&gt;</span>
+		<span class="tag">&lt;/<span class="name">tr</span>&gt;</span>
+	<span class="tag">&lt;/<span class="name">tbody</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">table</span>&gt;</span></code></pre>
+
+<p>css:</p>
+<pre><code class="highlight css"><span class="selector-class">.txt</span> {
+        <span class="attribute">height</span>: <span class="number">300px</span>;
+	<span class="attribute">background-color</span>: <span class="number">#ccc</span>;
+}</code></pre>
+
+<blockquote>
+<p><strong>这里的父元素就是 td，父元素的高度必须确定，就要为其设置 height。</strong></p>
+</blockquote>
+<p><strong>注意</strong>这里的 p 元素是 <strong>inline</strong> 类型的，所以设置 <code>vertical-align: middle</code> 的话会出现错误，若果是图片元素 img 的话，就可以设置 <code>vertical-align: middle</code>，但是由于 td 标签默认，所以都可以不写。</p>
+<p>效果如下：</p>
+<pre>
+
+
+居中内容
+
+
+
+</pre>
+
+<h5 id="2、设置-table-cell"><a href="#2、设置-table-cell" class="headerlink" title="2、设置 table-cell"></a>2、设置 table-cell</h5><p>第二种方法是把要垂直居中显示的元素的父元素设置为<strong>table-cell (表格单元)</strong>类型：<code>display: table-cell;</code>，然后设置 <code>vertical-align: middle</code>就能实现元素垂直居中。</p>
+<p>但是这个方法存在兼容性问题，<strong>chrome, firefox, IE8以上</strong>才支持这个操作。</p>
+<p>例如：
+html:</p>
+<pre><code class="highlight html"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"txt"</span>&gt;</span>
+	<span class="tag">&lt;<span class="name">p</span>&gt;</span>居中内容<span class="tag">&lt;/<span class="name">p</span>&gt;</span>
+	<span class="tag">&lt;<span class="name">p</span>&gt;</span>居中内容<span class="tag">&lt;/<span class="name">p</span>&gt;</span>
+	<span class="tag">&lt;<span class="name">p</span>&gt;</span>居中内容<span class="tag">&lt;/<span class="name">p</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">div</span>&gt;</span></code></pre>
+
+<p>css:</p>
+<pre><code class="highlight css"><span class="selector-class">.txt</span> {
+        <span class="attribute">height</span>: <span class="number">300px</span>;
+	<span class="attribute">background-color</span>: <span class="number">#ccc</span>;
+	<span class="attribute">display</span>: table-cell;
+	<span class="attribute">vertical-align</span>: middle;
+}</code></pre>
+
+<blockquote>
+<p><strong>同样，要为父元素 div 设置高度 height</strong></p>
+</blockquote>
+<p>效果如下：</p>
+<pre>
+
+
+居中内容
+
+
+
+</pre>
+
+<p>这种方法除了兼容性问题外，同时也改变了 <strong>display</strong>类型，会在某些方面带来不便。</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://LuyiaGoe.cn" rel="external nofollow noreferrer">LuyiaGoe</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://LuyiaGoe.cn">https://LuyiaGoe.cn</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://LuyiaGoe.cn" target="_blank">LuyiaGoe</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="../../../../../tags/CSS/">
+                                    <span class="chip bg-color">CSS</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="../../../../12/13/HTML&CSS/CSSSelector/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/medias/featureimages/11.jpg" class="responsive-img" alt="CSS选择符的权重">
+                        
+                        <span class="card-title">CSS选择符的权重</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            CSS选择符的权重 目录
+css选择符权重 
+css选择器权重列表 
+CSS选择符冲突处理 
+
+
+
+
+css选择符权重 css选择器权重列表 选择器        权重
+内联样式        1000
+ID            0100
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-13
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="../../../../../categories/CSS/" class="post-category">
+                                    CSS
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="../../../../../tags/CSS/">
+                        <span class="chip bg-color">CSS</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="../../../11/Node/NodePackage.json/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/medias/featureimages/19.jpg" class="responsive-img" alt="package.json详解">
+                        
+                        <span class="card-title">package.json详解</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            package.json详解name: 包名称，符合正则/\w+/
+description：包详情
+author：包作者
+version：版本
+keywords：关键字数组
+maintainers：维护者数组，元素包含name [, nam
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-11
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="../../../../../categories/Node/" class="post-category">
+                                    Node
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="../../../../../tags/Npm/">
+                        <span class="chip bg-color">Npm</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('50')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: LuyiaGoe&#39;s Blog<br />'
+            + '文章作者: LuyiaGoe<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归LuyiaGoe所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+
+<!-- 代码块复制 -->
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="6639929126"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="https://LuyiaGoe.cn" target="_blank">LuyiaGoe</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "7";
+                    var startDate = "10";
+                    var startHour = "16";
+                    var startMinute = "22";
+                    var startSecond = "19";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/LuyiaGoe" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:641512449@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=641512449" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 641512449" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/materialize/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/aos/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

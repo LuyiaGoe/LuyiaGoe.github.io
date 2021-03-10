@@ -1,0 +1,1210 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Vue源码解读（一）, Blog">
+    <meta name="description" content="Looking for right direction">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Vue源码解读（一） | LuyiaGoe&#39;s Blog</title>
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/css/my.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/jquery/jquery.min.js"></script>
+    
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="atom.xml" title="LuyiaGoe's Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="../../../../../index.html" class="waves-effect waves-light">
+                    
+                    <img src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">LuyiaGoe's Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">LuyiaGoe's Blog</div>
+        <div class="logo-desc">
+            
+            Looking for right direction
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/LuyiaGoe/LuyiaGoe.github.io/fork" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/LuyiaGoe/LuyiaGoe.github.io/fork" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '../../../../../index.html';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/medias/featureimages/18.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Vue源码解读（一）</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+        
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    .toc-fixed .toc-link::before{
+        position: fixed!important;/*当toc的位置改为fixed时，.toc-link::before也要改为fixed*/
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="../../../../../tags/Vue/">
+                                <span class="chip bg-color">Vue</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="../../../../../categories/Vue/" class="post-category">
+                                Vue
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-12-29
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Vue源码解读（一）"><a href="#Vue源码解读（一）" class="headerlink" title="Vue源码解读（一）"></a>Vue源码解读（一）</h1><blockquote>
+<p>有没有想过Vue是怎么写出来的，各个模块的原理是什么？那么我带大家看看源码。</p>
+</blockquote>
+<p>首先，我们拉取vue的源码，<code>git clone https://github.com/vuejs/vue.git</code></p>
+<p>然后为了方便查看，我们使用vscode或webstorm进行查看</p>
+<h2 id="一、目录结构分析"><a href="#一、目录结构分析" class="headerlink" title="一、目录结构分析"></a>一、目录结构分析</h2><p>根据展示的目录分析，对应了以下不同的功能：</p>
+<p>1、benchmarks</p>
+<p>项目的性能测试</p>
+<p>针对vue进行性能测试</p>
+<p>2、dist</p>
+<p>项目的输出</p>
+<p>可以在这里找到vue的各种版本。包括commonJS规范、esm规范、umd规范（不带后缀的）等</p>
+<p>3、examples</p>
+<p>项目的使用样例</p>
+<p>可以学习如何使用Vue的样例</p>
+<p>4、flow</p>
+<p>静态类型检查</p>
+<p>5、packages</p>
+<p>vue项目包</p>
+<p>6、scripts</p>
+<p>项目的命令，可以对该项目进行操作</p>
+<p>7、src</p>
+<p>项目源文件</p>
+<p>8、test</p>
+<p>单元测试</p>
+<p>9、types</p>
+<p>vue的ts声明</p>
+<h2 id="二、src源文件"><a href="#二、src源文件" class="headerlink" title="二、src源文件"></a>二、src源文件</h2><p>展开Vue的src目录，根据命名可以简单的将Vue分成五大块，分别对应不同的功能：</p>
+<p>1、compile</p>
+<p>编译模块，包括事件、指令、模板转换</p>
+<p>2、core</p>
+<p>核心模块，包括组件、全局API、实例、响应式、工具库、虚拟DOM</p>
+<p>3、platform</p>
+<p>平台模块，包括web、weex</p>
+<p>4、server</p>
+<p>服务模块</p>
+<p>5、sfc</p>
+<p>单文件组件模块，用于解析</p>
+<p>6、shared</p>
+<p>公共模块，包括全局常量和工具库</p>
+<h3 id="1、shared"><a href="#1、shared" class="headerlink" title="1、shared"></a>1、shared</h3><p>区分好了模块，就该开始办正事了。所有的模块都会用到公共模块，可以先从shared下手。</p>
+<h4 id="1-2-全局常量（-src-shared-constants-js）"><a href="#1-2-全局常量（-src-shared-constants-js）" class="headerlink" title="1.2 全局常量（/src/shared/constants.js）"></a>1.2 全局常量（/src/shared/constants.js）</h4><pre><code class="highlight js"><span class="keyword">export</span> <span class="keyword">const</span> SSR_ATTR = <span class="string">'data-server-rendered'</span>; <span class="comment">// ssr渲染时的属性名</span>
+
+<span class="keyword">export</span> <span class="keyword">const</span> ASSET_TYPES = [ <span class="comment">// 断言类型</span>
+  <span class="string">'component'</span>,
+  <span class="string">'directive'</span>,
+  <span class="string">'filter'</span>
+]
+
+<span class="keyword">export</span> <span class="keyword">const</span> LIFECYCLE_HOOKS = [ <span class="comment">// 生命周期钩子</span>
+  <span class="string">'beforeCreate'</span>,
+  <span class="string">'created'</span>,
+  <span class="string">'beforeMount'</span>,
+  <span class="string">'mounted'</span>,
+  <span class="string">'beforeUpdate'</span>,
+  <span class="string">'updated'</span>,
+  <span class="string">'beforeDestroy'</span>,
+  <span class="string">'destroyed'</span>, <span class="comment">// 以上的是我们最常见的8个基本钩子</span>
+  <span class="string">'activated'</span>,
+  <span class="string">'deactivated'</span>, <span class="comment">// 这两个钩子会在组件使用了keep-alive时存在</span>
+  <span class="string">'errorCaptured'</span>, <span class="comment">// 错误捕获钩子</span>
+  <span class="string">'serverPrefetch'</span> <span class="comment">// 未知，待补充</span>
+]</code></pre>
+
+<h4 id="1-2-工具库（-src-shared-utils-js）"><a href="#1-2-工具库（-src-shared-utils-js）" class="headerlink" title="1.2 工具库（/src/shared/utils.js）"></a>1.2 工具库（/src/shared/utils.js）</h4><p>说明：该文件采用了flow库，类ts语法。有很多有用的函数可以在这里看到，建议大家细读。下面我只发名称与对应的功能。<strong>建议搭配源文件一起查看！</strong></p>
+<p>emptyObject：空对象，该对象不可修改</p>
+<p>isUndef：是否是undefined或null</p>
+<p>isDef：isUndef的非</p>
+<p>isTrue：是否全等true</p>
+<p>isFalse：是否全等false</p>
+<p>isPrimitive：是否是原始类型，不包括undefined和null，但包括ES6的Symbol</p>
+<p>isObject：是否是对象，不包括null</p>
+<p>toRawType：获取原始数据类型字符串</p>
+<p>isPlainObject：判断是否是纯JS对象。纯JS对象是指直接原型为Object的对象。Array、Function等均不是纯JS对象。</p>
+<p>isRegExp：是否是正则对象。</p>
+<p>isValidArrayIndex：判断数组的下标是否合法</p>
+<p>isPromise：是否是Promise对象</p>
+<p>toString：将一个值转换成字符串，对象、数组会转换成JSON字符串。</p>
+<p>toNumber：转换成数字，针对字符串。</p>
+<p>makeMap：生成映射，用于检测一个键是否在映射中。</p>
+<p>isBuiltInTag：是否是在标签中生成的，这里指slot和component是否在在模板字符串中。</p>
+<p>isReservedAttribute：检测一个属性是否是保留属性。包括key、ref、slot、slot-scope、is。</p>
+<p>remove：从数组中移除任意该项内容。</p>
+<p>hasOwn：是hasOwnProperty的简写，检测对象是否有该键。</p>
+<p>cached：创建一个可以缓存的纯函数。在第一次执行后，后面会读取缓存。（有没有想到计算属性）</p>
+<p>camelize：驼峰化一个连字符，基于缓存函数cached</p>
+<p>capitalize：将第一个字符大写化，基于缓存函数cached</p>
+<p>hyphenate：连字符化一个驼峰，基于缓存函数cached</p>
+<p>bind：bind兼容，不兼容时用apply模拟</p>
+<p>toArray：将类数组转换成数组</p>
+<p>extend：将一个对象扩展另一个对象的属性</p>
+<p>toObject：将一个数组转换成一个对象</p>
+<p>noop：无具体作用，用于flow的检测</p>
+<p>no：总是返回false</p>
+<p>identity：返回自身</p>
+<p>genStaticKeys：从编译器模块中返回包含静态键的字符串</p>
+<p>looseEqual：判断两个变量是否全等，包括对象与数组</p>
+<p>looseIndexOf：返回数组中包含变量的序号</p>
+<p>once：单词执行函数</p>
+<h3 id="2、core（-src-core-）"><a href="#2、core（-src-core-）" class="headerlink" title="2、core（/src/core/）"></a>2、core（/src/core/）</h3><p>然后，我们转移注意力到从最核心的地方core，查看index.js（/src/core/index.js）</p>
+<p>可以看出instance就是Vue类，initGlobalAPI处理Vue初始化全局api，相关渲染方式处理，最后导出的是一个Vue构造函数。</p>
+<p>除次之外，还有一个config.js（/src/core/config.js）的文件，可以看到里面的都是vue的全局配置项。目录下也有一个util工具库，最为核心的vdom等等。后面再谈这些。</p>
+<h4 id="2-1-instance（-src-core-instance）"><a href="#2-1-instance（-src-core-instance）" class="headerlink" title="2.1 instance（/src/core/instance）"></a>2.1 instance（/src/core/instance）</h4><p>instance与vue实例相关，通过index.js（/src/core/instance/index.js），可以发现，这里导出的是一个Vue构造函数，而这个构造函数分成了五个过程注入元素：</p>
+<pre><code class="highlight js">initMixin(Vue) <span class="comment">// 初始化</span>
+stateMixin(Vue) <span class="comment">// 状态</span>
+eventsMixin(Vue) <span class="comment">// 事件</span>
+lifecycleMixin(Vue) <span class="comment">// 生命周期</span>
+renderMixin(Vue) <span class="comment">// 渲染</span></code></pre>
+
+<p>根据命名，我们可以初步理解各个过程的含义。随后我们对对应的部分进行查看</p>
+<h5 id="2-1-1-init（-src-core-instance-init-js）"><a href="#2-1-1-init（-src-core-instance-init-js）" class="headerlink" title="2.1.1 init（/src/core/instance/init.js）"></a>2.1.1 init（/src/core/instance/init.js）</h5><p>init用于初始化Vue实例。</p>
+<p>首先为vue提供了<code>_init</code>方法，这个方法提供了<code>_uid</code>、<code>_isVue</code>、<code>$options</code>、<code>_renderProxy</code>、<code>_self</code>一系列属性</p>
+<p><em>注：这里的函数此时查看不一定能全懂，建议看的差不多了再回头看</em></p>
+<p>其中若传入的是组件，即传入值存在<code>_isComponent</code>会调用<code>initInternalComponent</code>进行处理</p>
+<p>同样，在Vue中很重要的<code>$options</code>，经过了<code>mergeOptions</code>、<code>resolveConstructorOptions</code>的嵌套处理</p>
+<p>而后是<code>initProxy</code>进行属性代理初始化</p>
+<p>再对实例进行数据注入：</p>
+<pre><code class="highlight js">initLifecycle(vm) <span class="comment">// 初始化生命周期</span>
+initEvents(vm) <span class="comment">// 初始化事件</span>
+initRender(vm) <span class="comment">// 初始化渲染</span>
+callHook(vm, <span class="string">'beforeCreate'</span>) <span class="comment">// 执行beforeCreate钩子</span>
+initInjections(vm) <span class="comment">// 初始化注入，此时数据和传值还未注入</span>
+initState(vm) <span class="comment">// 初始化状态</span>
+initProvide(vm) <span class="comment">// 解析数据和传值</span>
+callHook(vm, <span class="string">'created'</span>) <span class="comment">// 执行created钩子</span></code></pre>
+
+<p>可以很容易看出，我们在这里有执行两个生命周期，而能获取到this的生命周期便是created，那么我们晚会可以看看是在哪个过程中注入了this</p>
+<p>紧随其后，如果绑定元素是存在的，会开始进行绑定。</p>
+<pre><code class="highlight js"><span class="keyword">if</span> (vm.$options.el) {
+    vm.$mount(vm.$options.el)
+}</code></pre>
+
+<h5 id="2-1-2-lifecycle（-src-core-instance-lifecycle-js）"><a href="#2-1-2-lifecycle（-src-core-instance-lifecycle-js）" class="headerlink" title="2.1.2 lifecycle（/src/core/instance/lifecycle.js）"></a>2.1.2 lifecycle（/src/core/instance/lifecycle.js）</h5><h4 id="2-2-component"><a href="#2-2-component" class="headerlink" title="2.2 component"></a>2.2 component</h4><p>展开component目录，发现下面只有一个keep-alive。而keep-alive作用时候使组件不被销毁</p>
+<p>keep-alive:</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://LuyiaGoe.cn" rel="external nofollow noreferrer">LuyiaGoe</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://LuyiaGoe.cn">https://LuyiaGoe.cn</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://LuyiaGoe.cn" target="_blank">LuyiaGoe</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="../../../../../tags/Vue/">
+                                    <span class="chip bg-color">Vue</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="../../../../../2021/01/02/Node/NodeSpiderBundleData/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/medias/featureimages/8.jpg" class="responsive-img" alt="Node爬取大批量文件">
+                        
+                        <span class="card-title">Node爬取大批量文件</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Node爬取大批量文件
+
+有个朋友在搞留学工作室，经常访问的一个网站叫留学者指南，然而每次都要去访问该网站，显得极其不专业。于是托俺帮忙写脚本去爬他家的东西，我观察了下，这次，我们要爬的东西就有点多了——大概就20多万个文件吧~~~
+在20
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-02
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="../../../../../categories/Node/" class="post-category">
+                                    Node
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="../../../../../tags/Spider/">
+                        <span class="chip bg-color">Spider</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="../../Node/NodeSimpleSpider/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/medias/featureimages/18.jpg" class="responsive-img" alt="Node简单爬虫">
+                        
+                        <span class="card-title">Node简单爬虫</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Node简单爬虫
+最近一直在追火星的一本书，然后每次都要去网站看，感觉很麻烦，于是，想起用爬虫爬取章节，务实排，说干就干！
+
+爬取思路
+1、该网站的页面呈现出一定的规律
+2、使用NodeJS的request模块发起请求
+3、对获取到的数据进
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-29
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="../../../../../categories/Node/" class="post-category">
+                                    Node
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="../../../../../tags/Spider/">
+                        <span class="chip bg-color">Spider</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('50')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: LuyiaGoe&#39;s Blog<br />'
+            + '文章作者: LuyiaGoe<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归LuyiaGoe所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+
+<!-- 代码块复制 -->
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="6639929126"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="https://LuyiaGoe.cn" target="_blank">LuyiaGoe</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "7";
+                    var startDate = "10";
+                    var startHour = "16";
+                    var startMinute = "22";
+                    var startSecond = "19";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/LuyiaGoe" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:641512449@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=641512449" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 641512449" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/materialize/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/aos/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
