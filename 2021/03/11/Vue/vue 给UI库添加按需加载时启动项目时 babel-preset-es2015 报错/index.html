@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JavaScript变量转换, Blog">
+    <meta name="keywords" content="Vue 给UI库添加按需加载时启动项目时 babel-preset-es2015 报错, Blog">
     <meta name="description" content="Looking for right direction">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JavaScript变量转换 | LuyiaGoe&#39;s Blog</title>
+    <title>Vue 给UI库添加按需加载时启动项目时 babel-preset-es2015 报错 | LuyiaGoe&#39;s Blog</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/awesome/css/all.css">
@@ -281,7 +281,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JavaScript变量转换</h1>
+                    <h1 class="description center-align post-title">Vue 给UI库添加按需加载时启动项目时 babel-preset-es2015 报错</h1>
                 </div>
             </div>
         </div>
@@ -406,8 +406,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="../../../../../tags/Variable/">
-                                <span class="chip bg-color">Variable</span>
+                            <a href="../../../../../tags/Vue/">
+                                <span class="chip bg-color">Vue</span>
                             </a>
                         
                     </div>
@@ -418,8 +418,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="../../../../../categories/JavaScript/" class="post-category">
-                                JavaScript
+                            <a href="../../../../../categories/Vue/" class="post-category">
+                                Vue
                             </a>
                         
                     </div>
@@ -431,7 +431,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-03-09
+                    2021-03-11
                 </div>
                 
 
@@ -448,128 +448,41 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="JavaScript变量转换"><a href="#JavaScript变量转换" class="headerlink" title="JavaScript变量转换 "></a>JavaScript变量转换 <span id="home"></span></h2><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
-<li><strong><a href="#1">自动转换 </a></strong><ul>
-<li><strong><a href="#1.1">(1)Number与Boolean</a></strong></li>
-<li><strong><a href="#1.2">(2)Number与String</a></strong></li>
-<li><strong><a href="#1.3">(3)String与Boolean</a></strong></li>
-<li><strong><a href="#1.4">(4)null的自动转换</a></strong></li>
-<li><strong><a href="#1.5">(5)undefined的自动转换</a></strong></li>
-</ul>
-</li>
-<li><strong><a href="#2">强制转换 </a></strong><ul>
-<li><strong><a href="#2.1">运算强制转换 </a></strong><ul>
-<li><strong><a href="#2.1.1">(1)Number与Boolean</a></strong></li>
-<li><strong><a href="#2.1.2">(2)Number与String</a></strong></li>
-<li><strong><a href="#2.1.3">(3)String与Boolean</a></strong></li>
-<li><strong><a href="#2.1.4">(4)null</a></strong></li>
-<li><strong><a href="#2.1.5">(5)undefined</a></strong></li>
-</ul>
-</li>
-<li><strong><a href="#2.2">类型强制转换 </a></strong><ul>
-<li><strong><a href="#2.2.1">(1)Number</a></strong></li>
-<li><strong><a href="#2.2.2">(2)String</a></strong></li>
-<li><strong><a href="#2.2.3">(3)Boolean</a></strong></li>
-<li><strong><a href="#2.2.4">(4)null</a></strong></li>
-<li><strong><a href="#2.2.5">(5)undefined</a></strong></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="一、自动转换"><a href="#一、自动转换" class="headerlink" title="一、自动转换 "></a>一、自动转换 <span id="1"></span></h2><p>“==”的自动转换</p>
-<p>自动转换优先级：number&gt;boolean&gt;String，越小越先转换</p>
-<h3 id="1-Number与Boolean"><a href="#1-Number与Boolean" class="headerlink" title="(1)Number与Boolean: "></a>(1)Number与Boolean: <span id="1.1"></span></h3><pre><code>console.log(0==false); //true
-console.log(1==true);  //true
-console.log(2==true);  //flase
-//这个过程其实是Boolean类型转换为数字的过程</code></pre><h3 id="2-Number与String"><a href="#2-Number与String" class="headerlink" title="(2)Number与String: "></a>(2)Number与String: <span id="1.2"></span></h3><pre><code>console.log(""==0);  //true
-console.log("12"==12);  //true
-console.log("12a"==12);  //false
-//String自动转换时只能转换纯数字的字符串</code></pre><h3 id="3-String与Boolean"><a href="#3-String与Boolean" class="headerlink" title="(3)String与Boolean "></a>(3)String与Boolean <span id="1.3"></span></h3><pre><code>console.log(""==false);  //true
-console.log("s"==true);  //true
-//字符串转换为boolean均为true</code></pre><h3 id="4-null的自动转换"><a href="#4-null的自动转换" class="headerlink" title="(4)null的自动转换 "></a>(4)null的自动转换 <span id="1.4"></span></h3><p>null的本质是空对象，自动转换时会处理空对象的引用地址，转换为数字与其他对象的处理</p>
-<pre><code>console.log(null==0);  //false
-//地址是数字，且肯定不是0
+                <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>项目使用vue cli3脚手架工具构建
+按照element 官方文档中所示</p>
+<p><code>npm install babel-plugin-component -D</code></p>
+<p>然后添加.babelrc文件</p>
+<pre><code class="highlight javascript">{
+  <span class="string">"presets"</span>: [[<span class="string">"es2015"</span>, { <span class="string">"modules"</span>: <span class="literal">false</span> }]],
+  <span class="string">"plugins"</span>: [
+    [
+      <span class="string">"component"</span>,
+      {
+        <span class="string">"libraryName"</span>: <span class="string">"element-ui"</span>,
+        <span class="string">"styleLibraryName"</span>: <span class="string">"theme-chalk"</span>
+      }
+    ]
+  ]
+}</code></pre>
 
-console.log(null==false);  //false
-console.log(null==true);  //false
-//地址是数字，比较时会将boolean转换为数字
+<p>报如下错误：</p>
+<pre><code class="highlight javascript"><span class="built_in">Error</span>: Cannot find <span class="built_in">module</span> <span class="string">'babel-preset-es2015'</span> <span class="keyword">from</span> <span class="string">'C:\Users\Administrator\Des</span>
+<span class="string">ktop\vueProject\vuedemo'</span></code></pre>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><h3 id="1-此时应该安装-babel-preset-env"><a href="#1-此时应该安装-babel-preset-env" class="headerlink" title="1.此时应该安装@babel/preset-env"></a>1.此时应该安装@babel/preset-env</h3><p><code>npm i @babel/preset-env -D</code></p>
+<h3 id="2-并且修改-babelrc文件中的’presets’属性"><a href="#2-并且修改-babelrc文件中的’presets’属性" class="headerlink" title="2.并且修改.babelrc文件中的’presets’属性"></a>2.并且修改.babelrc文件中的’presets’属性</h3><pre><code class="highlight javascript">{
+  <span class="string">"presets"</span>: [[<span class="string">"@babel/preset-env"</span>, { <span class="string">"modules"</span>: <span class="literal">false</span> }]],
+  <span class="string">"plugins"</span>: [
+    [
+      <span class="string">"component"</span>,
+      {
+        <span class="string">"libraryName"</span>: <span class="string">"element-ui"</span>,
+        <span class="string">"styleLibraryName"</span>: <span class="string">"theme-chalk"</span>
+      }
+    ]
+  ]
+}</code></pre>
 
-console.log(null=="null");  //false
-console.log(null=="");  //false
-//地址为数字，比较时会将String转换为数字</code></pre><h3 id="5-undefined的自动转换"><a href="#5-undefined的自动转换" class="headerlink" title="(5)undefined的自动转换 "></a>(5)undefined的自动转换 <span id="1.5"></span></h3><p>undefined表示未定义，不带任何东西，大家可以理解为老顽固(偷笑)</p>
-<pre><code>console.log(undefined==0);  //false
-//无法自动转换数字
-
-console.log(undefined==false);  //false
-console.log(undefined==true);  //false
-//无法自动转换boolean
-
-console.log(undefined=="");  //false
-console.log(undefined=="undefined");  //false
-//无法自动转换为String
-
-console.log(undefined==null);  //true
-console.log(undefined===null);  //false
-//null是空对象，会被认为是undefined，但严格的来说两者是不相等的</code></pre><h2 id="二、强制转换"><a href="#二、强制转换" class="headerlink" title="二、强制转换 "></a>二、强制转换 <span id="2"></span></h2><h3 id="1、运算强制转换"><a href="#1、运算强制转换" class="headerlink" title="1、运算强制转换 "></a>1、运算强制转换 <span id="2.1"></span></h3><p>“+”会尝试将两端的值尝试转换为字符串或数字。优先级：String&gt;Number</p>
-<h4 id="1-Number与Boolean-1"><a href="#1-Number与Boolean-1" class="headerlink" title="(1)Number与Boolean: "></a>(1)Number与Boolean: <span id="2.1.1"></span></h4><pre><code>console.log(1+false); //1
-console.log(1+true);  //2</code></pre><h4 id="2-Number与String-1"><a href="#2-Number与String-1" class="headerlink" title="(2)Number与String: "></a>(2)Number与String: <span id="2.1.2"></span></h4><pre><code>console.log(""+1);  //"1"
-console.log("1"+1);  //"11"
-//运算时，String优先级大于Number，Number转换为String</code></pre><h3 id="3-String与Boolean-1"><a href="#3-String与Boolean-1" class="headerlink" title="(3)String与Boolean "></a>(3)String与Boolean <span id="2.1.3"></span></h3><pre><code>console.log(""+false);  //false
-console.log(""+true);  //true
-console.log(typeof(""+true));  //String
-//按照优先级，会将boolean转换为String</code></pre><h4 id="4-null"><a href="#4-null" class="headerlink" title="(4)null "></a>(4)null <span id="2.1.4"></span></h4><pre><code>console.log(null+1);  //1
-//null的本质是空对象,强制转换会转换为0</code></pre><h4 id="5-undefined"><a href="#5-undefined" class="headerlink" title="(5)undefined "></a>(5)undefined <span id="2.1.5"></span></h4><pre><code>console.log(undefined+0);  //NaN
-//强制转换数字时为NaN
-console.log(Boolean(undefined));  //false</code></pre><h3 id="2、类型强制转换"><a href="#2、类型强制转换" class="headerlink" title="2、类型强制转换 "></a>2、类型强制转换 <span id="2.2"></span></h3><h4 id="1-Number"><a href="#1-Number" class="headerlink" title="(1)Number "></a>(1)Number <span id="2.2.1"></span></h4><pre><code>String:
-这里说下String()和toString()的区别
-toString()可以将除了null、undefined以外的一切对象转换为String，且toString()可以接收第二个参数，将字符串的进制进行改变
-String()可以将任何对象转换为String，String只有一个传参
-
-Boolean:
-console.log(Boolean(0));  //false
-console.log(Boolean(1));  //true
-console.log(Boolean(2));  //true
-console.log(Boolean(-2));  //true
-//除0以外均为true</code></pre><h4 id="2-String"><a href="#2-String" class="headerlink" title="(2)String "></a>(2)String <span id="2.2.2"></span></h4><pre><code>Number:
-console.log(Number("1"));  //1
-console.log(Number("1a"));  //NaN
-console.log(Number(""));  //0
-console.log(parseInt("1a"));  //1
-console.log(parseInt("a1"));  //NaN
-console.log(parseInt(""));  //NaN
-//使用Number进行转换时必须是纯数字字符串，否则为NaN
-//使用parseInt转换时，头部必须有数字，否则为NaN
-//parseInt是全局函数，不属于Number，与Number强制转换有区别
-
-Boolean:
-console.log(Boolean(""));  //false
-console.log(Boolean("true"));  //true
-console.log(Boolean("false"));  //true
-//String为空是flase，其他均为true</code></pre><h4 id="3-Boolean"><a href="#3-Boolean" class="headerlink" title="(3)Boolean "></a>(3)Boolean <span id="2.2.3"></span></h4><pre><code>Number:
-console.log(Number(false));  //0
-console.log(Number(true));  //1
-
-String:
-输出对应的字符串</code></pre><h4 id="4-null-1"><a href="#4-null-1" class="headerlink" title="(4)null "></a>(4)null <span id="2.2.4"></span></h4><pre><code>Number:
-console.log(Number(null));  //0
-
-String:
-输出对应的字符串
-
-Boolean:
-console.log(Boolean(null));  //false</code></pre><h4 id="5-undefined-1"><a href="#5-undefined-1" class="headerlink" title="(5)undefined "></a>(5)undefined <span id="2.2.5"></span></h4><pre><code>Number:
-console.log(Number(undefined));  //NaN
-//此种方式强制转换依旧为非数字
-
-String:
-输出对应的字符串
-
-Boolean:
-console.log(Boolean(undefined));  //false</code></pre><p>码字不易，后面还会放出各种文章，喜欢的关注一下我吖，你们的关注是我最大的动力</p>
-<p>github：<a href="https://github.com/LuyiaGoe" target="_blank" rel="noopener">github.com/LuyiaGoe</a></p>
-<p>个人博客：<a href="https://LuyiaGoe.github.io" target="_blank" rel="noopener">LuyiaGoe.github.io</a></p>
+<p>解决问题</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -651,8 +564,8 @@ console.log(Boolean(undefined));  //false</code></pre><p>码字不易，后面�
                     
                         <div class="article-tag">
                             
-                                <a href="../../../../../tags/Variable/">
-                                    <span class="chip bg-color">Variable</span>
+                                <a href="../../../../../tags/Vue/">
+                                    <span class="chip bg-color">Vue</span>
                                 </a>
                             
                         </div>
@@ -693,11 +606,12 @@ console.log(Boolean(undefined));  //false</code></pre><p>码字不易，后面�
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="../../../11/Vue/vue%20%E7%BB%99UI%E5%BA%93%E6%B7%BB%E5%8A%A0%E6%8C%89%E9%9C%80%E5%8A%A0%E8%BD%BD%E6%97%B6%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%9B%AE%E6%97%B6%20babel-preset-es2015%20%E6%8A%A5%E9%94%99/">
+                <a href="">
                     <div class="card-image">
                         
                         
@@ -718,9 +632,9 @@ npm install babel-plugin-component -D
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-11
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-11
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -733,6 +647,7 @@ npm install babel-plugin-component -D
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -751,38 +666,41 @@ npm install babel-plugin-component -D
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="../../../01/HTML&CSS/HTMLAsyncLoadScript/">
+                <a href="../../../09/JavaScript/JavaScriptValueChange/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/medias/featureimages/0.jpg" class="responsive-img" alt="浏览器异步加载JS的方法">
+                        <img src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/medias/featureimages/2.jpg" class="responsive-img" alt="JavaScript变量转换">
                         
-                        <span class="card-title">浏览器异步加载JS的方法</span>
+                        <span class="card-title">JavaScript变量转换</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            浏览器异步加载JS的方法浏览器加载JS的方法说到这个，最常见的就是内置JS和外联JS了
-内置：
-&lt;script&gt;
-console.log('加载完成')
-&lt;/script&gt;
+                            JavaScript变量转换 目录
+自动转换 
+(1)Number与Boolean
+(2)Number与String
+(3)String与Boolean
+(4)null的自动转换
+(5)undefined的自动转换
 
-外联：
-&lt;script src="
+
+强制转换 
+运算强制
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-09
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../../../../../categories/HTML/" class="post-category">
-                                    HTML
+                            <a href="../../../../../categories/JavaScript/" class="post-category">
+                                    JavaScript
                                 </a>
                             
                             
@@ -792,12 +710,8 @@ console.log('加载完成')
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../../../../../tags/Async/">
-                        <span class="chip bg-color">Async</span>
-                    </a>
-                    
-                    <a href="../../../../../tags/JavaScript/">
-                        <span class="chip bg-color">JavaScript</span>
+                    <a href="../../../../../tags/Variable/">
+                        <span class="chip bg-color">Variable</span>
                     </a>
                     
                 </div>

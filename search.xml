@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Vue 给UI库添加按需加载时启动项目时 babel-preset-es2015 报错</title>
+      <link href="2021/03/11/Vue/vue%20%E7%BB%99UI%E5%BA%93%E6%B7%BB%E5%8A%A0%E6%8C%89%E9%9C%80%E5%8A%A0%E8%BD%BD%E6%97%B6%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%9B%AE%E6%97%B6%20babel-preset-es2015%20%E6%8A%A5%E9%94%99/"/>
+      <url>2021/03/11/Vue/vue%20%E7%BB%99UI%E5%BA%93%E6%B7%BB%E5%8A%A0%E6%8C%89%E9%9C%80%E5%8A%A0%E8%BD%BD%E6%97%B6%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%9B%AE%E6%97%B6%20babel-preset-es2015%20%E6%8A%A5%E9%94%99/</url>
+      
+        <content type="html"><![CDATA[<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>项目使用vue cli3脚手架工具构建按照element 官方文档中所示</p><p><code>npm install babel-plugin-component -D</code></p><p>然后添加.babelrc文件</p><pre><code class="highlight javascript">{  <span class="string">"presets"</span>: [[<span class="string">"es2015"</span>, { <span class="string">"modules"</span>: <span class="literal">false</span> }]],  <span class="string">"plugins"</span>: [    [      <span class="string">"component"</span>,      {        <span class="string">"libraryName"</span>: <span class="string">"element-ui"</span>,        <span class="string">"styleLibraryName"</span>: <span class="string">"theme-chalk"</span>      }    ]  ]}</code></pre><p>报如下错误：</p><pre><code class="highlight javascript"><span class="built_in">Error</span>: Cannot find <span class="built_in">module</span> <span class="string">'babel-preset-es2015'</span> <span class="keyword">from</span> <span class="string">'C:\Users\Administrator\Des</span><span class="string">ktop\vueProject\vuedemo'</span></code></pre><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><h3 id="1-此时应该安装-babel-preset-env"><a href="#1-此时应该安装-babel-preset-env" class="headerlink" title="1.此时应该安装@babel/preset-env"></a>1.此时应该安装@babel/preset-env</h3><p><code>npm i @babel/preset-env -D</code></p><h3 id="2-并且修改-babelrc文件中的’presets’属性"><a href="#2-并且修改-babelrc文件中的’presets’属性" class="headerlink" title="2.并且修改.babelrc文件中的’presets’属性"></a>2.并且修改.babelrc文件中的’presets’属性</h3><pre><code class="highlight javascript">{  <span class="string">"presets"</span>: [[<span class="string">"@babel/preset-env"</span>, { <span class="string">"modules"</span>: <span class="literal">false</span> }]],  <span class="string">"plugins"</span>: [    [      <span class="string">"component"</span>,      {        <span class="string">"libraryName"</span>: <span class="string">"element-ui"</span>,        <span class="string">"styleLibraryName"</span>: <span class="string">"theme-chalk"</span>      }    ]  ]}</code></pre><p>解决问题</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> Vue </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JavaScript变量转换</title>
       <link href="2021/03/09/JavaScript/JavaScriptValueChange/"/>
       <url>2021/03/09/JavaScript/JavaScriptValueChange/</url>

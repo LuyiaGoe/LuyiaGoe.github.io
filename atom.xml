@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://luyiagoe.cn/"/>
-  <updated>2021-03-10T03:14:27.153Z</updated>
+  <updated>2021-03-11T08:23:44.329Z</updated>
   <id>https://luyiagoe.cn/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue 给UI库添加按需加载时启动项目时 babel-preset-es2015 报错</title>
+    <link href="https://luyiagoe.cn/2021/03/11/Vue/vue%20%E7%BB%99UI%E5%BA%93%E6%B7%BB%E5%8A%A0%E6%8C%89%E9%9C%80%E5%8A%A0%E8%BD%BD%E6%97%B6%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%9B%AE%E6%97%B6%20babel-preset-es2015%20%E6%8A%A5%E9%94%99/"/>
+    <id>https://luyiagoe.cn/2021/03/11/Vue/vue%20%E7%BB%99UI%E5%BA%93%E6%B7%BB%E5%8A%A0%E6%8C%89%E9%9C%80%E5%8A%A0%E8%BD%BD%E6%97%B6%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%9B%AE%E6%97%B6%20babel-preset-es2015%20%E6%8A%A5%E9%94%99/</id>
+    <published>2021-03-11T08:10:34.000Z</published>
+    <updated>2021-03-11T08:23:44.329Z</updated>
+    
+    <summary type="html">
+    
+      Vue 给UI库添加按需加载时启动项目时 babel-preset-es2015 报错
+    
+    </summary>
+    
+    
+      <category term="Vue" scheme="https://LuyiaGoe.cn/categories/Vue/"/>
+    
+    
+      <category term="Vue" scheme="https://LuyiaGoe.cn/tags/Vue/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScript变量转换</title>
@@ -416,27 +437,6 @@
     
     
       <category term="Function" scheme="https://LuyiaGoe.cn/tags/Function/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript闭包详解</title>
-    <link href="https://luyiagoe.cn/2020/09/14/JavaScript/JavaScriptClosure/"/>
-    <id>https://luyiagoe.cn/2020/09/14/JavaScript/JavaScriptClosure/</id>
-    <published>2020-09-14T05:16:28.000Z</published>
-    <updated>2021-03-10T03:13:57.249Z</updated>
-    
-    <summary type="html">
-    
-      javascript闭包原理详解与举例
-    
-    </summary>
-    
-    
-      <category term="JavaScript" scheme="https://LuyiaGoe.cn/categories/JavaScript/"/>
-    
-    
-      <category term="Closure" scheme="https://LuyiaGoe.cn/tags/Closure/"/>
     
   </entry>
   
