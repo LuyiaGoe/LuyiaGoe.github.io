@@ -21,7 +21,7 @@ module.exports={
 }
 ```
 打包后网页中显示图片为：
-![Alt](https://LuyiaGoe.github.io/assets/posts/object-Module1.png#pic_center =30x30)
+![](https://LuyiaGoe.github.io/assets/posts/object-Module1.png)
 
 ## 解决方法
 在webpack.config.js文件中,对匹配规则修改如下：
@@ -36,4 +36,4 @@ module.exports={
 ```
 
 修改完成后，显示为：
-![Alt](https://LuyiaGoe.github.io/assets/posts/object-Module2.png#pic_center =30x30)
+![](https://LuyiaGoe.github.io/assets/posts/object-Module2.png)
