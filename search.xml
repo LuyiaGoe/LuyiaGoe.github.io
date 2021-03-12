@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>webpack 中 使用 url-loader 后图片src=&quot;[object Module]&quot; 导致图片无法显示</title>
+      <link href="2021/03/12/Webpack/webpack-URL-rules/"/>
+      <url>2021/03/12/Webpack/webpack-URL-rules/</url>
+      
+        <content type="html"><![CDATA[<h1 id="webpack-中-使用-url-loader-后图片src-”-object-Module-”-导致图片无法显示"><a href="#webpack-中-使用-url-loader-后图片src-”-object-Module-”-导致图片无法显示" class="headerlink" title="webpack 中 使用 url-loader 后图片src=”[object Module]” 导致图片无法显示"></a>webpack 中 使用 url-loader 后图片src=”[object Module]” 导致图片无法显示</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在webpack.config.js文件中,对图片的匹配规则如下：</p><pre><code class="highlight javascript"><span class="built_in">module</span>.exports={  <span class="built_in">module</span>:{    rules:[      { <span class="attr">test</span>: <span class="regexp">/\.jpg|png|gif|bmp|jpeg$/</span>, <span class="attr">use</span>: <span class="string">'url-loader?limit=7630&amp;name=[hash:8]-[name].[ext]'</span> }    ]  }}</code></pre><p>打包后网页中显示图片为：![Alt](<a href="https://LuyiaGoe.github.io/assets/posts/object-Module1.png#pic_center" target="_blank" rel="noopener">https://LuyiaGoe.github.io/assets/posts/object-Module1.png#pic_center</a> =30x30)</p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>在webpack.config.js文件中,对匹配规则修改如下：</p><pre><code class="highlight javascript"><span class="built_in">module</span>.exports={  <span class="built_in">module</span>:{    rules:[      { <span class="attr">test</span>: <span class="regexp">/\.jpg|png|gif|bmp|jpeg$/</span>, <span class="attr">use</span>: <span class="string">'url-loader?limit=7630&amp;name=[hash:8]-[name].[ext]&amp;esModule=false'</span> }    ]  }}</code></pre><p>修改完成后，显示为：![Alt](<a href="https://LuyiaGoe.github.io/assets/posts/object-Module2.png#pic_center" target="_blank" rel="noopener">https://LuyiaGoe.github.io/assets/posts/object-Module2.png#pic_center</a> =30x30)</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> Webpack </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Webpack </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Vue 给UI库添加按需加载时启动项目时 babel-preset-es2015 报错</title>
       <link href="2021/03/11/Vue/vue%20%E7%BB%99UI%E5%BA%93%E6%B7%BB%E5%8A%A0%E6%8C%89%E9%9C%80%E5%8A%A0%E8%BD%BD%E6%97%B6%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%9B%AE%E6%97%B6%20babel-preset-es2015%20%E6%8A%A5%E9%94%99/"/>
       <url>2021/03/11/Vue/vue%20%E7%BB%99UI%E5%BA%93%E6%B7%BB%E5%8A%A0%E6%8C%89%E9%9C%80%E5%8A%A0%E8%BD%BD%E6%97%B6%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%9B%AE%E6%97%B6%20babel-preset-es2015%20%E6%8A%A5%E9%94%99/</url>
