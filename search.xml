@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Unable to preventDefault inside passive event listener due to target being treated as passive</title>
+      <link href="2021/03/14/Webpack/Unable%20to%20preventDefault%20inside%20passive%20event%20listener%20due%20to%20target%20being%20treated%20as%20passive/"/>
+      <url>2021/03/14/Webpack/Unable%20to%20preventDefault%20inside%20passive%20event%20listener%20due%20to%20target%20being%20treated%20as%20passive/</url>
+      
+        <content type="html"><![CDATA[<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>翻译：chrome 监听touch类事件报错：无法被动侦听事件preventDefault<br><br>这是chrome浏览器报错，目的是为了最快速地相应touch事件而做出的改变<br><br>因为preventDefault()是取消默认事件的，如果这个函数起作用的话，比如默认的表单提交，a链接的点击跳转，就不好用了<br><br>历史：当浏览器首先对默认的事件进行响应的时候，要检查一下是否进行了默认事件的取消。这样就在响应滑动操作之前有那么一丝丝的耽误时间<br><br>现在：google就决定默认取消了对这个事件的检查，默认时间就取消了。直接执行滑动操作。这样就更加的顺滑了。但是浏览器的控制台就会进行错误提醒了<br><br>具体情况：从 chrome56 开始，在 window、document 和 body 上注册的 touchstart 和 touchmove 事件处理函数，会默认为是 passive: true。浏览器忽略 preventDefault() 就可以第一时间滚动了<br><br>导致下面的效果一致：</p><pre><code class="highlight javascript">wnidow.addEventListener(<span class="string">'touchmove'</span>, func) 效果和下面一句一样wnidow.addEventListener(<span class="string">'touchmove'</span>, func, { <span class="attr">passive</span>: <span class="literal">true</span> })</code></pre><p>这样会出现新的问题:<br>如果在以上这 3 个元素的 touchstart 和 touchmove 事件处理函数中调用 e.preventDefault() ，会被浏览器忽略掉，并不会阻止默认行为</p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol><li>注册处理函数时，用如下方式，明确声明为不是被动的<br>window.addEventListener(‘touchmove’, func, { passive: false })</li><li>应用 CSS 属性 touch-action: none; 这样任何触摸事件都不会产生默认行为，但是 touch 事件照样触发</li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> Webpack </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Webpack </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>webpack 中 使用 url-loader 后图片src=&quot;[object Module]&quot; 导致图片无法显示</title>
       <link href="2021/03/12/Webpack/webpack-URL-rules/"/>
       <url>2021/03/12/Webpack/webpack-URL-rules/</url>

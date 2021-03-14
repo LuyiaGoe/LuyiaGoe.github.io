@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="webpack 中 使用 url-loader 后图片src=&#34;[object Module]&#34; 导致图片无法显示, Blog">
+    <meta name="keywords" content="Unable to preventDefault inside passive event listener due to target being treated as passive, Blog">
     <meta name="description" content="Looking for right direction">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>webpack 中 使用 url-loader 后图片src=&#34;[object Module]&#34; 导致图片无法显示 | LuyiaGoe&#39;s Blog</title>
+    <title>Unable to preventDefault inside passive event listener due to target being treated as passive | LuyiaGoe&#39;s Blog</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/awesome/css/all.css">
@@ -276,12 +276,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">webpack 中 使用 url-loader 后图片src=&#34;[object Module]&#34; 导致图片无法显示</h1>
+                    <h1 class="description center-align post-title">Unable to preventDefault inside passive event listener due to target being treated as passive</h1>
                 </div>
             </div>
         </div>
@@ -431,7 +431,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-03-12
+                    2021-03-14
                 </div>
                 
 
@@ -448,27 +448,35 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="webpack-中-使用-url-loader-后图片src-”-object-Module-”-导致图片无法显示"><a href="#webpack-中-使用-url-loader-后图片src-”-object-Module-”-导致图片无法显示" class="headerlink" title="webpack 中 使用 url-loader 后图片src=”[object Module]” 导致图片无法显示"></a>webpack 中 使用 url-loader 后图片src=”[object Module]” 导致图片无法显示</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在webpack.config.js文件中,对图片的匹配规则如下：</p>
-<pre><code class="highlight javascript"><span class="built_in">module</span>.exports={
-  <span class="built_in">module</span>:{
-    rules:[
-      { <span class="attr">test</span>: <span class="regexp">/\.jpg|png|gif|bmp|jpeg$/</span>, <span class="attr">use</span>: <span class="string">'url-loader?limit=7630&amp;name=[hash:8]-[name].[ext]'</span> }
-    ]
-  }
-}</code></pre>
-<p>打包后网页中显示图片为：
-<img src="https://LuyiaGoe.github.io/assets/posts/object-Module1.png" alt=""></p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>在webpack.config.js文件中,对匹配规则修改如下：</p>
-<pre><code class="highlight javascript"><span class="built_in">module</span>.exports={
-  <span class="built_in">module</span>:{
-    rules:[
-      { <span class="attr">test</span>: <span class="regexp">/\.jpg|png|gif|bmp|jpeg$/</span>, <span class="attr">use</span>: <span class="string">'url-loader?limit=7630&amp;name=[hash:8]-[name].[ext]&amp;esModule=false'</span> }
-    ]
-  }
-}</code></pre>
-
-<p>修改完成后，显示为：
-<img src="https://LuyiaGoe.github.io/assets/posts/object-Module2.png" alt=""></p>
+                <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>翻译：chrome 监听touch类事件报错：无法被动侦听事件preventDefault
+<br>
+<br>
+这是chrome浏览器报错，目的是为了最快速地相应touch事件而做出的改变
+<br>
+<br>
+因为preventDefault()是取消默认事件的，如果这个函数起作用的话，比如默认的表单提交，a链接的点击跳转，就不好用了
+<br>
+<br>
+历史：当浏览器首先对默认的事件进行响应的时候，要检查一下是否进行了默认事件的取消。这样就在响应滑动操作之前有那么一丝丝的耽误时间
+<br>
+<br>
+现在：google就决定默认取消了对这个事件的检查，默认时间就取消了。直接执行滑动操作。这样就更加的顺滑了。但是浏览器的控制台就会进行错误提醒了
+<br>
+<br>
+具体情况：从 chrome56 开始，在 window、document 和 body 上注册的 touchstart 和 touchmove 事件处理函数，会默认为是 passive: true。浏览器忽略 preventDefault() 就可以第一时间滚动了
+<br>
+<br>
+导致下面的效果一致：</p>
+<pre><code class="highlight javascript">wnidow.addEventListener(<span class="string">'touchmove'</span>, func) 效果和下面一句一样
+wnidow.addEventListener(<span class="string">'touchmove'</span>, func, { <span class="attr">passive</span>: <span class="literal">true</span> })</code></pre>
+<p>这样会出现新的问题:
+<br>
+如果在以上这 3 个元素的 touchstart 和 touchmove 事件处理函数中调用 e.preventDefault() ，会被浏览器忽略掉，并不会阻止默认行为</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol>
+<li>注册处理函数时，用如下方式，明确声明为不是被动的<br>
+window.addEventListener(‘touchmove’, func, { passive: false })</li>
+<li>应用 CSS 属性 touch-action: none; 这样任何触摸事件都不会产生默认行为，但是 touch 事件照样触发</li>
+</ol>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -592,11 +600,12 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="../../../14/Webpack/Unable%20to%20preventDefault%20inside%20passive%20event%20listener%20due%20to%20target%20being%20treated%20as%20passive/">
+                <a href="">
                     <div class="card-image">
                         
                         
@@ -618,9 +627,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -633,6 +642,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -651,36 +661,33 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="../../../11/Vue/vue%20%E7%BB%99UI%E5%BA%93%E6%B7%BB%E5%8A%A0%E6%8C%89%E9%9C%80%E5%8A%A0%E8%BD%BD%E6%97%B6%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%9B%AE%E6%97%B6%20babel-preset-es2015%20%E6%8A%A5%E9%94%99/">
+                <a href="../../../12/Webpack/webpack-URL-rules/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/medias/featureimages/2.jpg" class="responsive-img" alt="Vue 给UI库添加按需加载时启动项目时 babel-preset-es2015 报错">
+                        <img src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/medias/featureimages/19.jpg" class="responsive-img" alt="webpack 中 使用 url-loader 后图片src="[object Module]" 导致图片无法显示">
                         
-                        <span class="card-title">Vue 给UI库添加按需加载时启动项目时 babel-preset-es2015 报错</span>
+                        <span class="card-title">webpack 中 使用 url-loader 后图片src="[object Module]" 导致图片无法显示</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            问题描述项目使用vue cli3脚手架工具构建
-按照element 官方文档中所示
-npm install babel-plugin-component -D
-然后添加.babelrc文件
-{
-  "presets": [["es2015"
+                            webpack 中 使用 url-loader 后图片src=”[object Module]” 导致图片无法显示问题描述在webpack.config.js文件中,对图片的匹配规则如下：
+module.exports={
+  module
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-12
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../../../../../categories/Vue/" class="post-category">
-                                    Vue
+                            <a href="../../../../../categories/Webpack/" class="post-category">
+                                    Webpack
                                 </a>
                             
                             
@@ -690,8 +697,8 @@ npm install babel-plugin-component -D
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../../../../../tags/Vue/">
-                        <span class="chip bg-color">Vue</span>
+                    <a href="../../../../../tags/Webpack/">
+                        <span class="chip bg-color">Webpack</span>
                     </a>
                     
                 </div>

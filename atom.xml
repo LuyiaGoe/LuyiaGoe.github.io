@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://luyiagoe.cn/"/>
-  <updated>2021-03-12T05:39:28.891Z</updated>
+  <updated>2021-03-14T09:01:40.375Z</updated>
   <id>https://luyiagoe.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Unable to preventDefault inside passive event listener due to target being treated as passive</title>
+    <link href="https://luyiagoe.cn/2021/03/14/Webpack/Unable%20to%20preventDefault%20inside%20passive%20event%20listener%20due%20to%20target%20being%20treated%20as%20passive/"/>
+    <id>https://luyiagoe.cn/2021/03/14/Webpack/Unable%20to%20preventDefault%20inside%20passive%20event%20listener%20due%20to%20target%20being%20treated%20as%20passive/</id>
+    <published>2021-03-14T08:53:34.000Z</published>
+    <updated>2021-03-14T09:01:40.375Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Webpack" scheme="https://LuyiaGoe.cn/categories/Webpack/"/>
+    
+    
+      <category term="Webpack" scheme="https://LuyiaGoe.cn/tags/Webpack/"/>
+    
+  </entry>
   
   <entry>
     <title>webpack 中 使用 url-loader 后图片src=&quot;[object Module]&quot; 导致图片无法显示</title>
@@ -422,27 +449,6 @@
     
     
       <category term="CSS" scheme="https://LuyiaGoe.cn/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>字符串拼接性能优化</title>
-    <link href="https://luyiagoe.cn/2020/10/09/JavaScript/JavaScriptStringBuffer/"/>
-    <id>https://luyiagoe.cn/2020/10/09/JavaScript/JavaScriptStringBuffer/</id>
-    <published>2020-10-09T10:18:06.000Z</published>
-    <updated>2021-03-10T03:07:46.616Z</updated>
-    
-    <summary type="html">
-    
-      在Java中，对大量字符串处理时存在StringBuilder、StringBuffer来进行优化，那么JavaScript的String是否也能进行优化呢？
-    
-    </summary>
-    
-    
-      <category term="JavaScript" scheme="https://LuyiaGoe.cn/categories/JavaScript/"/>
-    
-    
-      <category term="String" scheme="https://LuyiaGoe.cn/tags/String/"/>
     
   </entry>
   
