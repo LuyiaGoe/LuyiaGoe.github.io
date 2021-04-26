@@ -1,6 +1,6 @@
 ---
 title: CSS样式之内容居中方法
-date: 2020-11-14 18:48:55
+date: 2020-7-14 18:48:55
 layout: post
 categories: CSS
 tags: CSS

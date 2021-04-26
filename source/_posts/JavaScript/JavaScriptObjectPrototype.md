@@ -4,10 +4,7 @@ date: 2020-11-11 12:21:12
 layout: post
 categories: JavaScript
 tags: Object
-excerpt: 最近我建议你读Vue框架的源码，你说你看不懂？什么？Object的方法不会？好吧，来，先来恶补一波Object原型吧~
 ---
-
-[TOC]
 
 # Object
 
