@@ -448,29 +448,23 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="精简">精简</h2>
-<ol>
+                <h2 id="精简"><a href="#精简" class="headerlink" title="精简"></a>精简</h2><ol>
 <li>根据请求的<code>URL</code>交给<code>DNS</code>域名解析，找到真实<code>IP</code>，向服务器发起请求；</li>
 <li>服务器交给后台处理完成后返回数据，浏览器接受文件（<code>HTML、JS、CSS</code>、图像等）；</li>
 <li>浏览器对返还的资源进行解析，并建立相应的内部数据结构（如<code>HTML</code>的<code>DOM</code>）；</li>
 <li>载入解析到的资源文件，渲染页面</li>
 </ol>
-<h2 id="详细">详细</h2>
-<ol>
+<h2 id="详细"><a href="#详细" class="headerlink" title="详细"></a>详细</h2><ol>
 <li>输入URL</li>
-<li>浏览器检查缓存</li>
-</ol>
-<ul>
+<li>浏览器检查缓存<ul>
 <li>若未缓存，发起新请求</li>
 <li>若有缓存，且新鲜，则直接使用缓存，跳到转码步骤</li>
 <li>若不新鲜，则携带缓存标识对服务器发起请求，根据服务器相应数据再生成页面</li>
 </ul>
-<ol start="3">
+</li>
 <li>浏览器解析URL获取协议、主机、端口、path</li>
 <li>组装一个HTTP请求报文</li>
-<li>浏览器获取主机IP地址，过程如下：</li>
-</ol>
-<ul>
+<li>浏览器获取主机IP地址，过程如下：<ul>
 <li>浏览器缓存</li>
 <li>本级缓存</li>
 <li>hosts文件</li>
@@ -478,64 +472,52 @@
 <li>ISP DNS缓存</li>
 <li>DNS递归查询</li>
 </ul>
-<ol start="6">
-<li>打开一个socket与目标IP地址，开始TCP三次握手：</li>
-</ol>
-<ul>
+</li>
+<li>打开一个socket与目标IP地址，开始TCP三次握手：<ul>
 <li>客户端发送一个TCP的<code>SYN=1,Seq=X</code>的包到服务器端口</li>
 <li>服务器返回<code>SYN=1,ACK=X+1,Seq=Y</code>的响应包</li>
 <li>客户端发送<code>ACK=Y+1,Seq=Z</code></li>
 </ul>
-<ol start="7">
+</li>
 <li>TCP连接建立后发送HTTP请求</li>
 <li>服务器接受请求并解析，转到服务程序</li>
 <li>检查请求头是否携带缓存标识，有则验证是否新鲜，返回304等对应状态码</li>
 <li>处理程序读取完整请求并准备HTTP相应，可能需要查询数据库等操作</li>
 <li>服务器等响应报文通过TCP连接发送回浏览器</li>
-<li>浏览器接受HTTP响应，根据情况选择关闭TCP连接或保留重用，关闭则进行TCP四次挥手：</li>
-</ol>
-<ul>
+<li>浏览器接受HTTP响应，根据情况选择关闭TCP连接或保留重用，关闭则进行TCP四次挥手：<ul>
 <li>主动方发送<code>Fin=1, Ack=Z, Seq=X</code></li>
 <li>被动方发送<code>ACK=X+1, Seq=Z</code></li>
 <li>被动方发送<code>Fin=1, ACK=X, Seq=Y</code></li>
 <li>主动方发送<code>ACK=Y,Seq=X</code></li>
 </ul>
-<ol start="13">
+</li>
 <li>浏览器检查响应码：是否为1XX，3XX，4XX，5XX，这些情况处理与2XX不同</li>
 <li>查看是否可缓存，可以则缓存</li>
 <li>对相应进行解码（如gzip压缩）</li>
 <li>根据资源类型决定如何处理（假设资源为HTML文档）</li>
 <li>解析HTML文档，构件DOM树，下载资源，构造CSSOM树，执行JS脚本，这些操作没有严格的先后顺序</li>
-<li>构件DOM树：</li>
-</ol>
-<ul>
+<li>构件DOM树：<ul>
 <li><code>Tokenizing</code>：根据<strong>HTML规范</strong>将字符流解析为标记</li>
 <li><code>Lexing</code>：<strong>词法分析</strong>将标记转换为对象并定义属性和规则</li>
 <li><code>DOM construction</code>：根据<strong>HTML标记关系</strong>将对象组成DOM树</li>
 </ul>
-<ol start="19">
+</li>
 <li>解析过程中遇到图片、样式表、js脚本，启动下载</li>
-<li>构件<strong>CSSOM树：</strong></li>
-</ol>
-<ul>
+<li>构件<strong>CSSOM树：</strong><ul>
 <li><code>Tokenizing</code>：将字符流转换为标记流</li>
 <li><code>Node</code>：根据标记创建节点</li>
 <li><code>CSSOM</code>：节点创建CSSOM树</li>
 </ul>
-<ol start="21">
-<li><strong>根据DOM树和CSSOM树构件渲染树：</strong></li>
-</ol>
-<ul>
+</li>
+<li><strong>根据DOM树和CSSOM树构件渲染树：</strong><ul>
 <li>从DOM树的根节点遍历所有可见节点，不可见节点包括：</li>
 <li><code>script、meta</code>这样本身不可见的标签</li>
 <li>被css隐藏的节点，如<code>display:none</code></li>
 <li>对没一个可见节点，找到恰当的CSSOM规则并应用</li>
 <li>发布可视节点的内容个计算样式</li>
 </ul>
-<ol start="22">
-<li>JS解析如下：</li>
-</ol>
-<ul>
+</li>
+<li>JS解析如下：<ul>
 <li>浏览器创建Document对象，并解析HTML，将解析到的元素和文本节点添加到文档中，此时<strong>document.readystate为loading</strong></li>
 <li>遇到<strong>同步的script</strong>时，将它们添加到文档，文档暂停解析，转而进行下载并运行脚本。如此可以用document.write()可以吧文本插入到输入流中。<strong>同步脚本经常简单定义函数和注册事件处理程序，他们可以遍历和操作script和他们之前的文档内容</strong></li>
 <li>遇到<strong>async的script</strong>时，开始下载脚本，并继续解析文档。脚本会在<strong>下载完成后尽快执行</strong>。<strong>异步脚本禁止使用write，它们可以访问自己script和之前的文档元素</strong></li>
@@ -544,10 +526,8 @@
 <li>Document对象<strong>触发DOMContentLoaded事件</strong></li>
 <li>此时文档完全解析，浏览器可能还在等待如图片的内容的加载，这些内容完成载入并且所有异步脚本完成载入和执行，<strong>document.readyState变为complete，window触发load事件</strong></li>
 </ul>
-<ol start="23">
-<li>显示页面（HTML解析过程中会逐步显示页面）</li>
-</ol>
-<ul>
+</li>
+<li>显示页面（HTML解析过程中会逐步显示页面）<ul>
 <li>从浏览器接受<code>URL</code>到开启网络请求线程（可以展开浏览器的机制及进程与线程间的关系）</li>
 <li>开启网络线程到发出一个完整的<code>HTTP</code>请求（设计到DNS查询，<code>TCP/IP</code>请求，五层因特网协议栈等）</li>
 <li>服务器接受到请求到对应后台接收到请求（可能设计到负载均衡，安全拦截以及后台内部的处理）</li>
@@ -558,6 +538,8 @@
 <li>JS引擎解析过程（JS的解释阶段、预处理阶段、执行阶段生成执行上下文，VO，作用域链、回收机制等等）</li>
 <li>其他（如跨域、web安全、hybrid模式等等）</li>
 </ul>
+</li>
+</ol>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {

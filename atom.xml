@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://luyiagoe.cn/"/>
-  <updated>2021-04-26T02:50:53.391Z</updated>
+  <updated>2021-04-26T07:23:21.099Z</updated>
   <id>https://luyiagoe.cn/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>仿网易云项目总结</title>
+    <title>仿网易云项目</title>
     <link href="https://luyiagoe.cn/2021/04/16/Vue/%E4%BB%BF%E7%BD%91%E6%98%93%E4%BA%91%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
     <id>https://luyiagoe.cn/2021/04/16/Vue/%E4%BB%BF%E7%BD%91%E6%98%93%E4%BA%91%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/</id>
     <published>2021-04-16T11:09:10.000Z</published>
-    <updated>2021-04-26T02:50:53.391Z</updated>
+    <updated>2021-04-26T07:23:21.099Z</updated>
     
     <summary type="html">
     
@@ -33,9 +33,17 @@
       <category term="Vue" scheme="https://LuyiaGoe.cn/categories/Vue/"/>
     
     
+      <category term="Vue" scheme="https://LuyiaGoe.cn/tags/Vue/"/>
+    
       <category term="Project" scheme="https://LuyiaGoe.cn/tags/Project/"/>
     
-      <category term="Practice" scheme="https://LuyiaGoe.cn/tags/Practice/"/>
+      <category term="VueX" scheme="https://LuyiaGoe.cn/tags/VueX/"/>
+    
+      <category term="ElementUI" scheme="https://LuyiaGoe.cn/tags/ElementUI/"/>
+    
+      <category term="axios" scheme="https://LuyiaGoe.cn/tags/axios/"/>
+    
+      <category term="Vue-Router" scheme="https://LuyiaGoe.cn/tags/Vue-Router/"/>
     
   </entry>
   
