@@ -65,9 +65,9 @@ cover:
 # 配置首页显示"梦想"的语句.
 dream:
   enable: true
-  showTitle: true
+  showTitle: false
   title: 我的梦想
-  text: 不是每个人都应该像我这样去建造一座水晶大教堂，但是每个人都应该拥有自己的梦想，设计自己的梦想，追求自己的梦想，实现自己的梦想。梦想是生命的灵魂，是心灵的灯塔，是引导人走向成功的信仰。有了崇高的梦想，只要矢志不渝地追求，梦想就会成为现实，奋斗就会变成壮举，生命就会创造奇迹。——罗伯·舒乐
+  text: 我曾七次鄙视自己的灵魂，第一次，当我本可进取时，却故作谦卑；第二次，是当我看到自己在瘸子面前跛行而过时；第三次，当我在难易之间抉择时，我习惯性选择容易的；第四次，是当我犯了错，却借由别人也会犯错来宽慰自己时；第五次，当我的因为软弱一味忍让时，却把忍让说成了坚韧；第六次，是当她鄙夷一张丑恶的嘴脸，却不知那正是自己面具中的一副时；第七次，是当她吟唱圣歌，却自诩为一种美德时。————纪伯伦 《沙与沫》
 
 # Whether to display the musics.
 # 是否在首页显示音乐.
@@ -337,8 +337,8 @@ verifyPassword:
 # 不蒜子(http://busuanzi.ibruce.info/) 网站统计
 busuanziStatistics:
   enable: true
-  totalTraffic: true # 总访问量
-  totalNumberOfvisitors: true # 总人次
+  totalTraffic: false # 总访问量
+  totalNumberOfvisitors: false # 总人次
 
 # Add google analytics configuration
 # 添加 Google Analytics 配置
@@ -496,8 +496,8 @@ subtitle:
   startDelay: 300 # 开始延迟
   typeSpeed: 100 # 打字速度
   backSpeed: 50 # 删除速度
-  sub1: 从来没有真正的绝境, 只有心灵的迷途
-  sub2: Never really desperate, only the lost of the soul
+  sub1: 用心念书，是为了避免成为不中用的人
+  sub2: To study hard is to avoid being a useless person
 
 # 手机二级菜单.
 navMenu:
