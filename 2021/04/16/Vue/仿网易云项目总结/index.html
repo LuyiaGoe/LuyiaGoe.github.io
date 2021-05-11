@@ -468,47 +468,60 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a>项目介绍</h2><p>本项目采用Vue全家桶，与ElementUI搭配搭建而成，展示链接：
-<a href="https://luyiagoe.gitee.io/imitating-netease-cloud" target="_blank" rel="noopener">仿网易云展示页</a>
-<img src="https://LuyiaGoe.github.io/assets/posts/wangyi_project_index.png" alt="">
-<img src="https://LuyiaGoe.github.io/assets/posts/wangyi_project_songlistpage.png" alt="">
-<img src="https://LuyiaGoe.github.io/assets/posts/wangyi_project_play.png" alt="">
-<img src="https://LuyiaGoe.github.io/assets/posts/wangyi_project_videopage.png" alt="">
+                <h2 id="项目介绍">项目介绍</h2>
+<p>本项目采用Vue全家桶，与ElementUI搭配搭建而成，展示链接：<br>
+<a href="https://luyiagoe.gitee.io/imitating-netease-cloud" target="_blank" rel="noopener">仿网易云展示页</a><br>
+<img src="https://LuyiaGoe.github.io/assets/posts/wangyi_project_index.png" alt=""><br>
+<img src="https://LuyiaGoe.github.io/assets/posts/wangyi_project_songlistpage.png" alt=""><br>
+<img src="https://LuyiaGoe.github.io/assets/posts/wangyi_project_play.png" alt=""><br>
+<img src="https://LuyiaGoe.github.io/assets/posts/wangyi_project_videopage.png" alt=""><br>
 <img src="https://LuyiaGoe.github.io/assets/posts/wangyi_project_videoplay.png" alt=""></p>
-<h2 id="核心内容"><a href="#核心内容" class="headerlink" title="核心内容"></a>核心内容</h2><ol>
-<li>页面搭建<ul>
+<h2 id="核心内容">核心内容</h2>
+<ol>
+<li>页面搭建</li>
+</ol>
+<ul>
 <li>Vue-cli快速搭建</li>
 <li>采用ElementUI搭建页面</li>
 <li>通过Vue-Router和组件构建前端路由</li>
 <li>采用axios请求开源API：<a href="https://neteasecloudmusicapi.vercel.app" target="_blank" rel="noopener">网易云音乐 NodeJS 版 API</a></li>
 </ul>
-</li>
+<ol start="2">
 <li>播放组件</li>
-<li>播放列表<ul>
+<li>播放列表</li>
+</ol>
+<ul>
 <li>利用VueX管理播放数据（如正在播放歌曲信息、待播放歌曲列表、添加或切换的播放歌曲信息）</li>
 </ul>
-</li>
-<li>播放事件<ul>
-<li>通过组件中触发相应事件调用VueX的mutations达到切换、添加歌曲及切换播放列表等播放事件</li>
-</ul>
-</li>
+<ol start="4">
+<li>播放事件</li>
 </ol>
-<h2 id="创建项目的细节（部分）"><a href="#创建项目的细节（部分）" class="headerlink" title="创建项目的细节（部分）"></a>创建项目的细节（部分）</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ol>
+<ul>
+<li>通过组件中触发相应事件调用VueX的mutations达到切换、添加歌曲及切换播放列表等等的播放事件</li>
+</ul>
+<h2 id="创建项目的细节（部分）">创建项目的细节（部分）</h2>
+<h3 id="准备工作">准备工作</h3>
+<ol>
 <li>图片</li>
 <li>后端api <a href="https://neteasecloudmusicapi.vercel.app" target="_blank" rel="noopener">https://neteasecloudmusicapi.vercel.app</a></li>
 <li>创建相应文件夹</li>
 <li>插件下载及导入</li>
 <li>main.js</li>
 </ol>
-<h3 id="首页制作"><a href="#首页制作" class="headerlink" title="首页制作"></a>首页制作</h3><ol>
+<h3 id="首页制作">首页制作</h3>
+<ol>
 <li>采用elementui的Container 布局容器</li>
-<li>侧边栏采用NavMenu 导航菜单组件<ul>
-<li>使用 vue-router 的模式 即：:router=”true”</li>
-<li>取消选中高亮，使高亮跟普通字体颜色一样 active-text-color=”black”</li>
+<li>侧边栏采用NavMenu 导航菜单组件</li>
+</ol>
+<ul>
+<li>使用 vue-router 的模式 即：:router=“true”</li>
+<li>取消选中高亮，使高亮跟普通字体颜色一样 active-text-color=“black”</li>
 <li>设置路由index</li>
 </ul>
-</li>
-<li>设置登录<ul>
+<ol start="3">
+<li>设置登录</li>
+</ol>
+<ul>
 <li>dialog组件 弹出登录框</li>
 <li>带验证的 Form表单组件 输入登录信息</li>
 <li>配置vecel后端api，并设置axios根路径，vue.config.js配置跨域问题</li>
@@ -516,29 +529,36 @@
 <li>存储登录后的cookie信息到 localStorage ，命名为musicCookie</li>
 <li>设置头像，头像图片URL存在res.data.profile.avatarUrl中</li>
 </ul>
-</li>
+<ol start="4">
 <li>设置退出登录</li>
-<li>获取用户歌单并循环放入侧边栏<ul>
+<li>获取用户歌单并循环放入侧边栏</li>
+</ol>
+<ul>
 <li>向/user/playlist请求，歌单在res.data.playlist中，存入currentUserPlayList</li>
 <li>侧边栏v-for循环currentUserPlayList,通过其中的subscribed判断是用户创建的还是收藏的歌单</li>
 <li>v-if与v-for不能在同一个标签中使用，通过外包一层div将v-for与key扔到里面避免该问题</li>
 </ul>
-</li>
+<ol start="6">
 <li>主体部分路由设置</li>
-<li>脚部播放组件<ul>
+<li>脚部播放组件</li>
+</ol>
+<ul>
 <li>通过slider组件实现</li>
 <li>左边放置歌曲图片、名、歌手，中间放滑动条、前后首、暂停播放按钮，右边放音量、歌单</li>
 <li>设置全局过滤器，将播放时间过滤成mm:ss的形式，并将过滤后的时间放到滑动条两侧</li>
 </ul>
-</li>
+<h3 id="发现音乐页制作">发现音乐页制作</h3>
+<ol>
+<li>tab标签页制作</li>
 </ol>
-<h3 id="发现音乐页制作"><a href="#发现音乐页制作" class="headerlink" title="发现音乐页制作"></a>发现音乐页制作</h3><ol>
-<li>tab标签页制作<ul>
+<ul>
 <li>tab页签头更换样式</li>
 <li>tab内容中放入router-view，并根据不同的页签配置不同的路由</li>
 </ul>
-</li>
-<li>个性推荐页制作<ul>
+<ol start="2">
+<li>个性推荐页制作</li>
+</ol>
+<ul>
 <li>轮播图采用Carousel 走马灯形式</li>
 <li>轮播图api为‘bannner’</li>
 <li>推荐歌单区域采用Divider 分割线</li>
@@ -546,67 +566,90 @@
 <li>独家放送页同上</li>
 <li>最新歌曲采用el-row+el-table方式布局</li>
 </ul>
-</li>
-<li>歌单页面制作<ul>
+<ol start="3">
+<li>歌单页面制作</li>
+</ol>
+<ul>
 <li>添加分类按钮，根据分类获取不同的歌单</li>
 <li>制作歌单列表</li>
 </ul>
-</li>
+<ol start="4">
 <li>排行榜页面制作</li>
 <li>歌手页面制作</li>
 <li>最新音乐制作</li>
 </ol>
-<h3 id="音乐播放列表页面制作"><a href="#音乐播放列表页面制作" class="headerlink" title="音乐播放列表页面制作"></a>音乐播放列表页面制作</h3><ol>
+<h3 id="音乐播放列表页面制作">音乐播放列表页面制作</h3>
+<ol>
 <li>创建文件及相应路由</li>
 <li>根据route传来的params获取相应歌单的清单</li>
 <li>制作歌单页面上部信息</li>
-<li>制作内容区域<ul>
+<li>制作内容区域</li>
+</ol>
+<ul>
 <li>放入路由占位符，出现请求头部信息</li>
 <li>制作歌曲列表页</li>
 <li>制作评论页</li>
 <li>制作收藏者页</li>
 </ul>
-</li>
-</ol>
-<h3 id="视频页面制作"><a href="#视频页面制作" class="headerlink" title="视频页面制作"></a>视频页面制作</h3><ol>
+<h3 id="视频页面制作">视频页面制作</h3>
+<ol>
 <li>视频和mv清单页面制作</li>
 <li>视频播放页面制作</li>
-<li>mv播放页面制作<ul>
+<li>mv播放页面制作</li>
+</ol>
+<ul>
 <li>与视频播放页面一致，但仅是采用的api不同，因此进行了合并</li>
 </ul>
-</li>
+<h3 id="播放功能制作">播放功能制作</h3>
+<ol>
+<li>采用vuex，想法是</li>
 </ol>
-<h3 id="播放功能制作"><a href="#播放功能制作" class="headerlink" title="播放功能制作"></a>播放功能制作</h3><ol>
-<li>采用vuex，想法是<ul>
+<ul>
 <li>将  正在播放的歌单、正播放的歌曲信息  放入状态管理</li>
 <li>将  切换歌曲、切换歌单、添加歌曲入播放列表  放入mutations属性</li>
 <li>因为请求用的api和传回的参数不尽相同，因此其他组件调用上述mutations属性时，需自行请求完数据，再进行调用并传递处理好的参数，而不是在vuex中进行请求</li>
 </ul>
-</li>
-<li>实现<ul>
+<ol start="2">
+<li>实现</li>
+</ol>
+<ul>
 <li>从$store中调出当前即将播放的歌曲id，请求得到URL送入audio标签播放</li>
 <li>获取audio的dom，为dom贴上timeupdate事件，以获取已播放时长以及歌曲时长，并绑定到拖动条上</li>
 </ul>
-</li>
+<h3 id="碰到的问题">碰到的问题</h3>
+<ol>
+<li>有些样式在当前页面内无法更改，甚至添加！important也没用，如何区分，如何变更</li>
 </ol>
-<h3 id="碰到的问题"><a href="#碰到的问题" class="headerlink" title="碰到的问题"></a>碰到的问题</h3><ol>
-<li>有些样式在当前页面内无法更改，甚至添加！important也没用，如何区分，如何变更<ul>
+<ul>
 <li>有些样式可以在global.css中定义并更改，并在HTML文件中引入，原因尚需思考,如圆角按钮和方角按钮，一个需要！impotant才能改padding，一个不需要</li>
 </ul>
-</li>
-<li>出现相同path，不同query的路由请求，却不触发跳转的情况<ul>
-<li>在标签内添加：key属性，<router-view :key="$route.path"></router-view>，原因需了解</li>
+<ol start="2">
+<li>出现相同path，不同query的路由请求，却不触发跳转的情况</li>
+</ol>
+<ul>
+<li>在标签内添加：key属性，<router-view :key="$route.path"></router-view>，原因是添加key后，vue会强制不复用这个router-view，只要key发生一点变化，都强制执行created和mounted钩子</li>
 <li>音乐播放列表出现子路由变换，父组件却重新渲染的问题，原因在于上一条的：key属性，只要key值发生变动，父组件就会重新渲染，此时path中已经换了，导致无法根据path中的params按需（如，根据id找到歌单信息）请求静态资源，导致父组件渲染失败，之前的解决方法是让子路由带上父组件的params，之后通过导入单独组件而不用路由的方式解决</li>
 </ul>
-</li>
+<ol start="3">
 <li>音乐清单页面需要优化的点是切换内容区域的不同模块时，都只需要加载一边，不要切一次加载一次，因此需要父子组件传值，或者用vuex</li>
 <li>出现全局污染</li>
 <li>添加歌单按钮出现不同浏览器不同显示效果问题</li>
 <li>el-input键入事件无法生效，通过在事件后添加.native可以解决</li>
+</ol>
+<ul>
+<li>.native是vue用于监听组件根元素的原生事件，用于自定义组件</li>
+</ul>
+<ol start="7">
 <li>在搜索页面搜索时会不刷新页面，通过在路由跳转时加上一串随机数字或者关键字，配合路由占位符中:key强制刷新</li>
 <li>父子组件传值时，父组件还在获取数据中，给子组件传递了空值或默认值，即使后面更新了，子组件却已经渲染出了空值并不再渲染后面传来的真数据，可以通过watch监视解决此问题</li>
+<li>打包过程中出现No module factory available for dependency type: CssDependency，之前并未出现该错误，目前没有发现原因</li>
 </ol>
-<h3 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h3><ol>
+<ul>
+<li>将vue.config.js中的css.extract设置为false，禁止打包过程中抽取css到单独的css文件中，而是内联到js中并动态注入，一般开发环境中默认的就是false，因为设置为true与css热重载不兼容</li>
+<li>所以第二种方法就是vue-cli中的build那一栏，将参数的环境设置为development</li>
+</ul>
+<h3 id="想法">想法</h3>
+<ol>
 <li>为了减少请求次数，父组件一次性在请求完自身页面数据并显示完后，再一次性请求完子组件数据，并通过父子组件传值传递数据，如歌单页面与其子路由清单页面利用父子组件传值</li>
 <li>vuex中存储正在播放的歌单，以及正在播放的歌曲id，为保证歌单中不出现重复的歌曲，利用同一首歌不能有同样的id的特点，采用set对象创建歌单</li>
 <li>home页面的播放组件从vuex中获取正在播放的歌曲，播放并展示相关歌曲信息图片</li>
@@ -773,7 +816,8 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            项目介绍本项目采用Vue全家桶，与ElementUI搭配搭建而成，展示链接：
+                            项目介绍
+本项目采用Vue全家桶，与ElementUI搭配搭建而成，展示链接：
 仿网易云展示页
 
 
@@ -781,11 +825,14 @@
 
 
 核心内容
+
 页面搭建
+
+
 Vue-cli快速搭建
 采用ElementUI搭建页面
 通过Vue-Router和组件构建前端路由
-采用axios请
+采用ax
                         
                     </div>
                     <div class="publish-info">
@@ -1118,16 +1165,6 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             
             
             
-            <span id="busuanzi_container_site_pv">
-                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
-                    class="white-color"></span>&nbsp;次
-            </span>
-            
-            
-            <span id="busuanzi_container_site_uv">
-                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
-                    class="white-color"></span>&nbsp;人
-            </span>
             
             <br>
             
