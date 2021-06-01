@@ -38,7 +38,7 @@
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
-                <a href="../../../../index.html" class="waves-effect waves-light">
+                <a href="../../../../../index.html" class="waves-effect waves-light">
                     
                     <img src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/medias/logo.png" class="logo-img" alt="LOGO">
                     
@@ -267,7 +267,7 @@
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
-                location.href = '../../../../index.html';
+                location.href = '../../../../../index.html';
             }
         }
     })();
@@ -406,7 +406,7 @@
                     
                     <div class="article-tag">
                         
-                            <a href="../../../../tags/React/">
+                            <a href="../../../../../tags/React/">
                                 <span class="chip bg-color">React</span>
                             </a>
                         
@@ -418,8 +418,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="../../../../categories/React/" class="post-category">
-                                React
+                            <a href="../../../../../categories/React-React-Route/" class="post-category">
+                                React React-Route
                             </a>
                         
                     </div>
@@ -1027,7 +1027,7 @@ resolve: {
    - componentWillUnmount()</code></pre>
 
 <h4 id="新生命周期"><a href="#新生命周期" class="headerlink" title="新生命周期"></a>新生命周期</h4><blockquote>
-<p>在新生命周期中，react不推荐用三个钩子，并有在之后的版本中禁用的打算，在现版本中需要加上<code>UNSAFE_</code>前缀才可使用，具体钩子如下</p>
+<p>在16.4之后的新生命周期中，react不推荐用三个钩子，并有在之后的版本中禁用的打算，在现版本中需要加上<code>UNSAFE_</code>前缀才可使用，具体钩子如下</p>
 </blockquote>
 <pre><code class="highlight js"><span class="number">1.</span>componentWillMount()
 <span class="number">2.</span>componentWillReceiveProps()
@@ -1035,9 +1035,10 @@ resolve: {
 <blockquote>
 <p>并且新加了两个钩子：</p>
 </blockquote>
-<pre><code class="highlight js"><span class="comment">//若state的值在任何时候都取决于props，那么可以使用getDerivedStateFromProps</span>
+<pre><code class="highlight js"><span class="comment">// 若state的值在任何时候都取决于props，那么可以使用getDerivedStateFromProps，是一个静态函数</span>
+<span class="comment">// 如果props传入的内容不需要影响到你的state，那么就需要返回一个null</span>
 <span class="number">1.</span> getDerivedStateFromProps(props,state) 
-<span class="comment">//在更新之前获取快照 需要有一个return，return的值会被传入 componentDidMount()</span>
+<span class="comment">// 在更新之前获取快照 需要有一个return，return的值会被传入 componentDidMount()</span>
 <span class="number">2.</span> getSnapshotBeforeUpdate()</code></pre>
 <p><img src="https://LuyiaGoe.github.io/assets/posts/react%E6%96%B0%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png" alt="React中组件的生命周期(新)"></p>
 <h3 id="9-通过Counter计数器的小案例-了解生命周期函数"><a href="#9-通过Counter计数器的小案例-了解生命周期函数" class="headerlink" title="9. 通过Counter计数器的小案例 - 了解生命周期函数"></a>9. 通过Counter计数器的小案例 - 了解生命周期函数</h3><ol>
@@ -1448,7 +1449,7 @@ dateFormat = <span class="function">(<span class="params">dt</span>) =&gt;</span
                     
                         <div class="article-tag">
                             
-                                <a href="../../../../tags/React/">
+                                <a href="../../../../../tags/React/">
                                     <span class="chip bg-color">React</span>
                                 </a>
                             
@@ -1494,7 +1495,7 @@ dateFormat = <span class="function">(<span class="params">dt</span>) =&gt;</span
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="../Vue/%E4%BB%BF%E7%BD%91%E6%98%93%E4%BA%91%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/">
+                <a href="../../Vue/%E4%BB%BF%E7%BD%91%E6%98%93%E4%BA%91%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/">
                     <div class="card-image">
                         
                         
@@ -1533,7 +1534,7 @@ Vue-cli快速搭建
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../../../../categories/Vue/" class="post-category">
+                            <a href="../../../../../categories/Vue/" class="post-category">
                                     Vue
                                 </a>
                             
@@ -1544,27 +1545,27 @@ Vue-cli快速搭建
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../../../../tags/Vue/">
+                    <a href="../../../../../tags/Vue/">
                         <span class="chip bg-color">Vue</span>
                     </a>
                     
-                    <a href="../../../../tags/Project/">
+                    <a href="../../../../../tags/Project/">
                         <span class="chip bg-color">Project</span>
                     </a>
                     
-                    <a href="../../../../tags/VueX/">
+                    <a href="../../../../../tags/VueX/">
                         <span class="chip bg-color">VueX</span>
                     </a>
                     
-                    <a href="../../../../tags/ElementUI/">
+                    <a href="../../../../../tags/ElementUI/">
                         <span class="chip bg-color">ElementUI</span>
                     </a>
                     
-                    <a href="../../../../tags/axios/">
+                    <a href="../../../../../tags/axios/">
                         <span class="chip bg-color">axios</span>
                     </a>
                     
-                    <a href="../../../../tags/Vue-Router/">
+                    <a href="../../../../../tags/Vue-Router/">
                         <span class="chip bg-color">Vue-Router</span>
                     </a>
                     
@@ -1579,7 +1580,7 @@ Vue-cli快速搭建
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="../../../03/26/Vue/VueComponentDevelopment/">
+                <a href="../../../../03/26/Vue/VueComponentDevelopment/">
                     <div class="card-image">
                         
                         
@@ -1606,7 +1607,7 @@ Vue组件化开发Vue很多人都会，而组件化也是近年来比较热的�
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../../../../categories/Vue/" class="post-category">
+                            <a href="../../../../../categories/Vue/" class="post-category">
                                     Vue
                                 </a>
                             
@@ -1617,7 +1618,7 @@ Vue组件化开发Vue很多人都会，而组件化也是近年来比较热的�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../../../../tags/Vue/">
+                    <a href="../../../../../tags/Vue/">
                         <span class="chip bg-color">Vue</span>
                     </a>
                     
