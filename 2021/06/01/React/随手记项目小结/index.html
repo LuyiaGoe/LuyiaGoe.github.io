@@ -448,56 +448,44 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="项目描述">项目描述</h2>
-<blockquote>
+                <h2 id="项目描述"><a href="#项目描述" class="headerlink" title="项目描述"></a>项目描述</h2><blockquote>
 <p>这是一个具备记录、保存、编辑账单的记账本应用，你可以在里面看到日周月年的流水记录，可以看到本月支出分类前三数据，还能看到自己资产金额，也可以根据不同的条件查询账单流水，还可以通过设置本月预算来辅助进行开销规划。</p>
 </blockquote>
 <p><a href="https://luyiagoe.github.io/account-books" target="_blank" rel="noopener">展示页</a></p>
-<h2 id="准备工作">准备工作</h2>
-<ol>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ol>
 <li>准备UI界面</li>
-<li>准备项目搭建，项目用到：</li>
-</ol>
-<ul>
+<li>准备项目搭建，项目用到：<ul>
 <li><code>react</code></li>
 <li><code>react-redux</code></li>
 <li><code>react-router</code></li>
 <li><code>Ant-design</code></li>
 <li>其他小插件，如随机数插件<code>number-random</code>、部署项目插件<code>gh-pages</code></li>
 </ul>
-<h2 id="项目亮点">项目亮点</h2>
-<h2 id="级联组件的制作封装">级联组件的制作封装</h2>
-<blockquote>
+</li>
+</ol>
+<h2 id="项目亮点"><a href="#项目亮点" class="headerlink" title="项目亮点"></a>项目亮点</h2><h2 id="级联组件的制作封装"><a href="#级联组件的制作封装" class="headerlink" title="级联组件的制作封装"></a>级联组件的制作封装</h2><blockquote>
 <p>考虑做一个类似数字密码锁样式的滚筒UI，做法如下：</p>
 </blockquote>
 <ol>
-<li>视窗确定：</li>
-</ol>
-<ul>
+<li>视窗确定：<ul>
 <li>使用<code>card</code>作为视图窗口，定位两根横线，横线中间的信息为选择项</li>
 <li>视窗分为两侧，左侧为一级选择器，右侧为二级选择器</li>
 </ul>
-<ol start="2">
-<li>3D视图参数</li>
-</ol>
-<ul>
+</li>
+<li>3D视图参数<ul>
 <li><code>perspective</code>取400px，滚筒设定为最多显示5个数据，每个数据的角度差值为<code>30deg</code>，因此角度区间取值为<code>[-60°,60°]</code></li>
 <li>每次滚动时，滚动角度为30°</li>
 </ul>
-<ol start="3">
-<li>传入传出数据</li>
-</ol>
-<ul>
+</li>
+<li>传入传出数据<ul>
 <li>传入API为：obj</li>
 <li>传入数据考虑为对象，键名为一级选择器选项，值为一个数组，为二级选择器选项</li>
 <li>收到传入数据时，首先遍历数据对象，取出键并放入一个数组中，该数组前端有两个空元素，该数组用于填充选择器的左端</li>
 <li>考虑用两个<code>selected</code>开头的标识，也可以视为指针，来辅助指向选中的一、二级信息位于数组的位置，同时为选择器指出渲染的起始位置</li>
 <li>传出数据用数组形式，第一个元素为一级选择器内容，第二个为二级选择器内容</li>
 </ul>
-<ol start="4">
-<li>动画实现，采用纯css实现</li>
-</ol>
-<ul>
+</li>
+<li>动画实现，采用纯css实现<ul>
 <li>因为用纯CSS实现的滚动效果，因此该版本无拖动滚动事件，考虑之后添加</li>
 <li>目前选择器有四个区域可以点击，分别控制一二级选择器进行上下滑动选择</li>
 <li>事件通过传入一个<code>ref</code>和<code>滚动事件</code>(上滚、下滚)，为目标选择器添加一个带动画的<code>className</code>，在动画结束后删除类名、更新选择器并渲染，<strong>且为了防止同组件间的相互干扰</strong>，<strong>因此需要将selected选中项放到state中</strong></li>
@@ -505,85 +493,75 @@
 <li>然后就出现了<strong>无限循环渲染</strong>问题，因为<code>edit</code>还有个作用是更新完<code>selected</code>后，会将新的渲染数组包装成h5标签并给组件<code>render</code>，因此我在组件的初始化中便调用了该函数，于是乎初始化→更新→更新……停不下来</li>
 <li>在<code>edit</code>中加入一个条件，当传入第一个参数为0时，跳过更新渲染，直接返回当前指针指定的数组标签族，当为1时，对应选择器的<code>selected+1</code>、选择器上翻并且渲染更新，于是跳出了无限循环渲染</li>
 </ul>
-<ol start="5">
-<li>数据处理</li>
-</ol>
-<ul>
+</li>
+<li>数据处理<ul>
 <li>对传入的<code>props</code>设置为该组件的<code>state</code>，并且给予对应的<code>setState</code>，取出键名作为一级选择器选项</li>
-<li>初次渲染和每次更新渲染时，用<code>useEffect</code>将选择器选中项，以数组的形式传给父组件
-<ul>
+<li>初次渲染和每次更新渲染时，用<code>useEffect</code>将选择器选中项，以数组的形式传给父组件<ul>
 <li>然后，又出现了死循环，原因是通过<code>useEffect</code>向父组件传值，父组件更新连带着该组件<code>useEffect</code>被触发，从而陷入了循环</li>
 </ul>
 </li>
 </ul>
-<h2 id="计算器封装">计算器封装</h2>
-<ol>
-<li>UI考虑</li>
+</li>
 </ol>
-<ul>
+<h2 id="计算器封装"><a href="#计算器封装" class="headerlink" title="计算器封装"></a>计算器封装</h2><ol>
+<li>UI考虑<ul>
 <li>考虑到是iPad端，需要有按键反馈提升用户体验，按钮不能“一按不起”，用3d摁下动作复杂、风格不符且性价比低，因此通过摁下抬起时的阴影变化提升反馈体验</li>
 <li>按钮最好不要颜色单一，功能键颜色需要突出，且单一按键最好加上渐变色</li>
 </ul>
-<ol start="2">
-<li>实现</li>
-</ol>
-<ul>
+</li>
+<li>实现<ul>
 <li>通过组件最外层放一个事件委托，获取点击的按钮的目标值</li>
-<li>用一个数组接到目标值，设置一个<strong>扳手</strong>
-<ul>
+<li>用一个数组接到目标值，设置一个<strong>扳手</strong><ul>
 <li>扳手的作用是每当数组中有一个运算符，便+1，或数组中传入了一个<code>=</code>时，便变成2</li>
 <li><strong>一旦扳手的值为2时，计算器运行计算</strong></li>
 <li>同时扳手也是判断计算器显示=（运算）或ok（退出计算器）的标识，所以扳手放在组件state中</li>
 </ul>
 </li>
 </ul>
-<ol start="3">
-<li>功能细节</li>
-</ol>
-<ul>
+</li>
+<li>功能细节<ul>
 <li>不止可以通过<code>=</code>进行计算，两个<code>+</code>或两个<code>-</code>或一样一个都可以进行运算，不过此时将会根据第一个运算符号，进行自加/自减</li>
-<li>小数点不能在一个数字中出现两次，因此需要一个标记flag控制，当进入下一个数字的输入时，才再次放开控制，下一次输入数字的情况有：
-<ul>
+<li>小数点不能在一个数字中出现两次，因此需要一个标记flag控制，当进入下一个数字的输入时，才再次放开控制，下一次输入数字的情况有：<ul>
 <li>点击<code>C + - =</code></li>
 </ul>
 </li>
 <li>因为开启了严格模式，这个组件也是通过eval形式进行运算的，所以<strong>要防止0开头的数字被认为是八进制</strong>，从而报错，所以要在每一个运算数字输入前对<code>0</code>的输入进行控制</li>
 <li><code>OK</code>不仅承担了关闭计算器的功能，还需要调用函数向父组件传值</li>
 </ul>
-<ol start="4">
-<li>接口API: initialNum={state.count} closeCalcu={closeCalcu} outPut={outPut}</li>
-</ol>
-<ul>
+</li>
+<li>接口API: initialNum={state.count} closeCalcu={closeCalcu} outPut={outPut}<ul>
 <li><code>initialNum</code>负责从父组件获得一个初始值并作为初始值展示，不传值默认为0，类型： Number</li>
 <li><code>closeCalcu</code>点击<code>ok</code>后调用的函数，类型： Function</li>
 <li><code>outPut</code>每次运算获得数值后调用的函数，函数携带结果，用于向父组件传值，类型： Function</li>
 </ul>
-<h2 id="流水页面">流水页面</h2>
-<ol>
+</li>
+</ol>
+<h2 id="流水页面"><a href="#流水页面" class="headerlink" title="流水页面"></a>流水页面</h2><ol>
 <li>从今日流水开始，对dayStream传入今日时间利用查询reducer获取相应数据展示</li>
 <li>接着获取weekStream时间，在组件中对时间进行拆分传入dayStream</li>
 <li>以此类推完成monthStream和yearStream</li>
 <li>再辅以一些小细节，如年流水不显示周收支合计，月年流水需要在展开头中显示收支结余进度条等等</li>
 <li>资产流水则从月单位出发，查询今年的收支</li>
 </ol>
-<h2 id="查询页面">查询页面</h2>
-<ol>
+<h2 id="查询页面"><a href="#查询页面" class="headerlink" title="查询页面"></a>查询页面</h2><ol>
 <li>查询则不以今年为限制，可以查询符合相应条件的所有账单</li>
 <li>首页没有数据所以要展示一个大图标，辅助用户添加筛选条件</li>
-<li></li>
+<li>筛选选项用一个弹出气泡显示，这样用户不占空间也可以在显示页面也能切换查询条件</li>
 </ol>
-<h2 id="传值记录">传值记录</h2>
-<ol>
-<li><code>useContext</code>传值：</li>
-</ol>
+<h2 id="传值记录"><a href="#传值记录" class="headerlink" title="传值记录"></a>传值记录</h2><ol>
+<li><p><code>useContext</code>传值：</p>
 <ul>
 <li>单纯用于传值和传递动画函数（Pay页面和IndexPage页面），不用<code>action reducer</code>修改的值</li>
 <li>设置了全局context，在<code>src</code>中生成了一个<code>globalContext</code>文件</li>
-<li></li>
+<li>文件中从<code>react</code>中导入<code>createContext</code>并默认导出</li>
+<li>在需要传出值的父级页面引入改文件并创建相应的<code>Provider</code></li>
+<li>将数据放入<code>Provider</code>组件的value中，并用组件包裹子组件</li>
+<li>子孙组件引入context文件并与<code>useContext</code>一同创建<code>Consumer</code></li>
+<li>如此，可以用方法和属性的形式调用父组件传入的值</li>
+<li>注意，<code>Consumer</code>会采用最近的父组件<code>Provider</code>传入的值</li>
 </ul>
-<ol start="2">
-<li><code>react-redux</code>传值：</li>
-</ol>
+</li>
+<li><p><code>react-redux</code>传值：</p>
 <ul>
 <li>用于创建、保存、编辑、删除、查询、分类、排名等用</li>
 <li>文件分为store、constant、actions、reducers</li>
@@ -595,13 +573,12 @@
 <li>组件分为容器组件和UI组件，容器组件从actions拿到操作方法，负责和store交互，包括操作数据、传收值，再将数据传给UI组件</li>
 <li>在根组件用Provider包裹，并传入store</li>
 </ul>
-<h2 id="思考">思考</h2>
-<ol>
+</li>
+</ol>
+<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><ol>
 <li>项目色调为橘色和暗黄色</li>
 <li>风格偏向于卡片化+横条化，记账清晰明了，这样也有利于组件封装与复用的实现</li>
-<li>记账的数据应进行分类，考虑有：</li>
-</ol>
-<ul>
+<li>记账的数据应进行分类，考虑有：<ul>
 <li>收入支出分类，属性为<code>pay: true(支出)/false(收入)</code>，<strong>必需属性</strong></li>
 <li>账户分类，属性为<code>account: String</code>，<strong>必需属性</strong></li>
 <li>日期分类，属性为<code>date: Number</code>，<strong>必需属性</strong></li>
@@ -611,10 +588,8 @@
 <li>备注，属性为<code>remark: String</code></li>
 <li>成员，属性为<code>member: String</code></li>
 </ul>
-<ol start="4">
-<li>根据分类，在查询<code>countData</code>时应做提交相应查询条件对象，每个分类的键值对结构应为：</li>
-</ol>
-<ul>
+</li>
+<li>根据分类，在查询<code>countData</code>时应做提交相应查询条件对象，每个分类的键值对结构应为：<ul>
 <li>收入支出分类<code>pay:Boolean</code></li>
 <li>账户分类<code>account: String</code></li>
 <li>日期分类<code>date:[Number,Number]</code></li>
@@ -623,52 +598,40 @@
 <li>金额分类<code>count: [Number,Number]</code></li>
 <li>成员<code>member:String</code></li>
 </ul>
-<ol start="5">
+</li>
 <li>发起查询动作时，一并要提供一个查询对象，其中包含两个值，一是查询范围<code>list(component可以提供String、Array类型数据，但在reducer逻辑中时，数据结构为Array)</code>，一是查询条件<code>demand(从始至终数据结构为Object)</code></li>
-<li>查询reducer接收到action时，会根据条件的键值对中，值的数据类型进行分类查询：</li>
-</ol>
-<ul>
+<li>查询reducer接收到action时，会根据条件的键值对中，值的数据类型进行分类查询：<ul>
 <li>比如<code>category count date</code>是引用数据类型，其他的是基本数据类型</li>
 <li>基本数据类型要求是精准匹配，匹配逻辑是一样的，所以不用做区分，符合<code>demand[key]=list[key]</code>就通过</li>
 <li>数组结构的条件，是范围查询用的，当两端取值一样时，便成了精准查值了</li>
 <li>数组结构中也分两类，一类是<code>category</code>可以查一级选择器或查到二级选择器，一类是<code>date count</code>用于范围查找的，尤其是date，基本不能查到具体时间点的账单</li>
-<li>
-<blockquote>
+<li><blockquote>
 <p>综上，按照查询条件中的数据结构，将查询逻辑分三类:精准查找<code>pay id member account</code>、分级查找<code>category</code>、范围查找<code>date count</code></p>
 </blockquote>
 </li>
 </ul>
-<ol start="7">
-<li><code>list</code>查询范围可以根据传入的信息，找出相关范围的数组交给reducer按demand进行查找</li>
-</ol>
-<ul>
+</li>
+<li><code>list</code>查询范围可以根据传入的信息，找出相关范围的数组交给reducer按demand进行查找<ul>
 <li><code>list</code>的值可以为<code>all today week month</code>关键字，分别是以<code>所有 今天 这周 这月</code>的账单为范围</li>
 <li>也可以传入一个带着date数据的数组，以数组中时间内的账单为范围</li>
 </ul>
-<ol start="8">
-<li>排名reducer需求数据同上，接收到需要排名的<code>list demand</code>,返回一个符合需求的数组，数组符合<code>demand</code>要求</li>
-</ol>
-<ul>
+</li>
+<li>排名reducer需求数据同上，接收到需要排名的<code>list demand</code>,返回一个符合需求的数组，数组符合<code>demand</code>要求<ul>
 <li><code>demand</code>中自带一个<code>order</code>属性，为空或者为<code>false</code>默认为降序</li>
 <li>如果出现多个数据同级，则再按照时间顺序，从近到远排序</li>
 </ul>
-<ol start="9">
-<li>修改账单与添加账单同reducer</li>
-</ol>
-<h2 id="问题记录">问题记录</h2>
-<ol>
-<li>在antd的card组件中设置一个浮动组件，会出现被外面的组件占掉位置的情况</li>
-</ol>
-<ul>
+</li>
+<li>修改账单与添加账单同reducer<h2 id="问题记录"><a href="#问题记录" class="headerlink" title="问题记录"></a>问题记录</h2></li>
+<li>在antd的card组件中设置一个浮动组件，会出现被外面的组件占掉位置的情况<ul>
 <li>推测是提供的组件没有触发BFC，通过给card组件设置overflow:hidden解决问题</li>
 </ul>
-<ol start="2">
+</li>
 <li>key值的设置不能为<code>Math.random()</code>，引入随机数小插件解决问题</li>
-<li>设置BrowserRouter在github上刷新动作会出现404，因为域名是博客页面，因此用HashRouter</li>
-</ol>
-<ul>
+<li>设置BrowserRouter在github上刷新动作会出现404，因为域名是博客页面，因此用HashRouter<ul>
 <li>当前页面只有一个params值，因此想要在同一个页面，通过params进入不同路由，需要go（-1）返回第一次通过params跳转的页面，有个不能省略的注释标记在代码中</li>
 </ul>
+</li>
+</ol>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -810,11 +773,10 @@
                     <div class="summary block-with-text">
                         
                             项目描述
-
 这是一个具备记录、保存、编辑账单的记账本应用，你可以在里面看到日周月年的流水记录，可以看到本月支出分类前三数据，还能看到自己资产金额，也可以根据不同的条件查询账单流水，还可以通过设置本月预算来辅助进行开销规划。
 
 展示页
-准备工
+准备工作
                         
                     </div>
                     <div class="publish-info">
