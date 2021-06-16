@@ -682,22 +682,20 @@ process.stdout.write(mix)</code></pre>
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="../../../11/JavaScript/JavaScriptObjectPrototype/">
+                <a href="../../../11/JavaScript/%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/medias/featureimages/2.jpg" class="responsive-img" alt="Object原型梳理">
+                        <img src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/medias/featureimages/1.jpg" class="responsive-img" alt="节流和防抖">
                         
-                        <span class="card-title">Object原型梳理</span>
+                        <span class="card-title">节流和防抖</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            [TOC]
-Object最近我建议你读Vue框架的源码，你说你看不懂？什么？Object的方法不会？好吧，来，先来恶补一波Object原型吧~
-Object是一种引用数据类型，也是一个构造函数。
-Object属性1、Object.proto
+                            节流定义：在一段时间内，多次触发同一函数，只执行第一次触发的函数
+1、实现如下实现的关键是靠一个标识flag达成，只有标识为true才被允许创建一个定时器，设置完后将标识改为false防止再次创建，只有定时器所定的回调执行后，标识才会被设置
                         
                     </div>
                     <div class="publish-info">
@@ -734,33 +732,32 @@ Object属性1、Object.proto
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="../../../../10/20/HTML&CSS/CSSLayoutModel/">
+                <a href="../../../../10/09/JavaScript/JavaScriptStringBuffer/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/medias/featureimages/20.jpg" class="responsive-img" alt="CSS布局模型详细介绍">
+                        <img src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/medias/featureimages/16.jpg" class="responsive-img" alt="字符串拼接性能优化">
                         
-                        <span class="card-title">CSS布局模型详细介绍</span>
+                        <span class="card-title">字符串拼接性能优化</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            HTML中元素有三种布局模型：流动模型、浮动模型、层模型。
-流动模型（flow）HTML网页默认布局就是流动模型，布局如下：
-块级元素(block)自上而下垂直分布，因为块级元素默认宽度为浏览器窗口的100%，或者理解为每个块级元素默认占一
+                            字符串拼接性能优化在Java中，对大量字符串处理时存在StringBuilder、StringBuffer来进行优化，那么JavaScript的String是否也能进行优化呢？
+这里以Java的StringBuffer为命名实现了一个Jav
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-09
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../../../../../categories/CSS/" class="post-category">
-                                    CSS
+                            <a href="../../../../../categories/JavaScript/" class="post-category">
+                                    JavaScript
                                 </a>
                             
                             
@@ -770,8 +767,8 @@ Object属性1、Object.proto
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../../../../../tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
+                    <a href="../../../../../tags/String/">
+                        <span class="chip bg-color">String</span>
                     </a>
                     
                 </div>
@@ -1007,16 +1004,6 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             
             
             
-            <span id="busuanzi_container_site_pv">
-                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
-                    class="white-color"></span>&nbsp;次
-            </span>
-            
-            
-            <span id="busuanzi_container_site_uv">
-                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
-                    class="white-color"></span>&nbsp;人
-            </span>
             
             <br>
             

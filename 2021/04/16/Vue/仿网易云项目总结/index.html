@@ -1,0 +1,1255 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="仿网易云项目, Blog">
+    <meta name="description" content="Looking for right direction">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>仿网易云项目 | LuyiaGoe&#39;s Blog</title>
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/css/my.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/jquery/jquery.min.js"></script>
+    
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="atom.xml" title="LuyiaGoe's Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="../../../../../index.html" class="waves-effect waves-light">
+                    
+                    <img src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">LuyiaGoe's Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">LuyiaGoe's Blog</div>
+        <div class="logo-desc">
+            
+            Looking for right direction
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/LuyiaGoe/LuyiaGoe.github.io/fork" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/LuyiaGoe/LuyiaGoe.github.io/fork" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '../../../../../index.html';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/medias/featureimages/11.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">仿网易云项目</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+        
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    .toc-fixed .toc-link::before{
+        position: fixed!important;/*当toc的位置改为fixed时，.toc-link::before也要改为fixed*/
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="../../../../../tags/Vue/">
+                                <span class="chip bg-color">Vue</span>
+                            </a>
+                        
+                            <a href="../../../../../tags/Project/">
+                                <span class="chip bg-color">Project</span>
+                            </a>
+                        
+                            <a href="../../../../../tags/VueX/">
+                                <span class="chip bg-color">VueX</span>
+                            </a>
+                        
+                            <a href="../../../../../tags/Vue-Router/">
+                                <span class="chip bg-color">Vue-Router</span>
+                            </a>
+                        
+                            <a href="../../../../../tags/ElementUI/">
+                                <span class="chip bg-color">ElementUI</span>
+                            </a>
+                        
+                            <a href="../../../../../tags/axios/">
+                                <span class="chip bg-color">axios</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="../../../../../categories/Vue/" class="post-category">
+                                Vue
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-04-16
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a>项目介绍</h2><p>本项目采用Vue全家桶，与ElementUI搭配搭建而成，展示链接：
+<a href="https://luyiagoe.gitee.io/imitating-netease-cloud" target="_blank" rel="noopener">仿网易云展示页</a>
+<img src="https://LuyiaGoe.github.io/assets/posts/wangyi_project_index.png" alt="">
+<img src="https://LuyiaGoe.github.io/assets/posts/wangyi_project_songlistpage.png" alt="">
+<img src="https://LuyiaGoe.github.io/assets/posts/wangyi_project_play.png" alt="">
+<img src="https://LuyiaGoe.github.io/assets/posts/wangyi_project_videopage.png" alt="">
+<img src="https://LuyiaGoe.github.io/assets/posts/wangyi_project_videoplay.png" alt=""></p>
+<h2 id="核心内容"><a href="#核心内容" class="headerlink" title="核心内容"></a>核心内容</h2><ol>
+<li>页面搭建<ul>
+<li>Vue-cli快速搭建</li>
+<li>采用ElementUI搭建页面</li>
+<li>通过Vue-Router和组件构建前端路由</li>
+<li>采用axios请求开源API：<a href="https://neteasecloudmusicapi.vercel.app" target="_blank" rel="noopener">网易云音乐 NodeJS 版 API</a></li>
+</ul>
+</li>
+<li>播放组件</li>
+<li>播放列表<ul>
+<li>利用VueX管理播放数据（如正在播放歌曲信息、待播放歌曲列表、添加或切换的播放歌曲信息）</li>
+</ul>
+</li>
+<li>播放事件<ul>
+<li>通过组件中触发相应事件调用VueX的mutations达到切换、添加歌曲及切换播放列表等等的播放事件</li>
+</ul>
+</li>
+</ol>
+<h2 id="创建项目的细节（部分）"><a href="#创建项目的细节（部分）" class="headerlink" title="创建项目的细节（部分）"></a>创建项目的细节（部分）</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ol>
+<li>图片</li>
+<li>后端api <a href="https://neteasecloudmusicapi.vercel.app" target="_blank" rel="noopener">https://neteasecloudmusicapi.vercel.app</a></li>
+<li>创建相应文件夹</li>
+<li>插件下载及导入</li>
+<li>main.js</li>
+</ol>
+<h3 id="首页制作"><a href="#首页制作" class="headerlink" title="首页制作"></a>首页制作</h3><ol>
+<li>采用elementui的Container 布局容器</li>
+<li>侧边栏采用NavMenu 导航菜单组件<ul>
+<li>使用 vue-router 的模式 即：:router=”true”</li>
+<li>取消选中高亮，使高亮跟普通字体颜色一样 active-text-color=”black”</li>
+<li>设置路由index</li>
+</ul>
+</li>
+<li>设置登录<ul>
+<li>dialog组件 弹出登录框</li>
+<li>带验证的 Form表单组件 输入登录信息</li>
+<li>配置vecel后端api，并设置axios根路径，vue.config.js配置跨域问题</li>
+<li>向api的/login/cellphone发送请求进行登录操作，登陆成功会返回res.data.coda=200</li>
+<li>存储登录后的cookie信息到 localStorage ，命名为musicCookie</li>
+<li>设置头像，头像图片URL存在res.data.profile.avatarUrl中</li>
+</ul>
+</li>
+<li>设置退出登录</li>
+<li>获取用户歌单并循环放入侧边栏<ul>
+<li>向/user/playlist请求，歌单在res.data.playlist中，存入currentUserPlayList</li>
+<li>侧边栏v-for循环currentUserPlayList,通过其中的subscribed判断是用户创建的还是收藏的歌单</li>
+<li>v-if与v-for不能在同一个标签中使用，通过外包一层div将v-for与key扔到里面避免该问题</li>
+</ul>
+</li>
+<li>主体部分路由设置</li>
+<li>脚部播放组件<ul>
+<li>通过slider组件实现</li>
+<li>左边放置歌曲图片、名、歌手，中间放滑动条、前后首、暂停播放按钮，右边放音量、歌单</li>
+<li>设置全局过滤器，将播放时间过滤成mm:ss的形式，并将过滤后的时间放到滑动条两侧</li>
+</ul>
+</li>
+</ol>
+<h3 id="发现音乐页制作"><a href="#发现音乐页制作" class="headerlink" title="发现音乐页制作"></a>发现音乐页制作</h3><ol>
+<li>tab标签页制作<ul>
+<li>tab页签头更换样式</li>
+<li>tab内容中放入router-view，并根据不同的页签配置不同的路由</li>
+</ul>
+</li>
+<li>个性推荐页制作<ul>
+<li>轮播图采用Carousel 走马灯形式</li>
+<li>轮播图api为‘bannner’</li>
+<li>推荐歌单区域采用Divider 分割线</li>
+<li>歌单内容列表采用layout布局，一行4个单元通过获取列表清单后循环渲染上去（此处出现空白渲染bug  通过对el-row更改flex布局并设置flex-wrap换行解决</li>
+<li>独家放送页同上</li>
+<li>最新歌曲采用el-row+el-table方式布局</li>
+</ul>
+</li>
+<li>歌单页面制作<ul>
+<li>添加分类按钮，根据分类获取不同的歌单</li>
+<li>制作歌单列表</li>
+</ul>
+</li>
+<li>排行榜页面制作</li>
+<li>歌手页面制作</li>
+<li>最新音乐制作</li>
+</ol>
+<h3 id="音乐播放列表页面制作"><a href="#音乐播放列表页面制作" class="headerlink" title="音乐播放列表页面制作"></a>音乐播放列表页面制作</h3><ol>
+<li>创建文件及相应路由</li>
+<li>根据route传来的params获取相应歌单的清单</li>
+<li>制作歌单页面上部信息</li>
+<li>制作内容区域<ul>
+<li>放入路由占位符，出现请求头部信息</li>
+<li>制作歌曲列表页</li>
+<li>制作评论页</li>
+<li>制作收藏者页</li>
+</ul>
+</li>
+</ol>
+<h3 id="视频页面制作"><a href="#视频页面制作" class="headerlink" title="视频页面制作"></a>视频页面制作</h3><ol>
+<li>视频和mv清单页面制作</li>
+<li>视频播放页面制作</li>
+<li>mv播放页面制作<ul>
+<li>与视频播放页面一致，但仅是采用的api不同，因此进行了合并</li>
+</ul>
+</li>
+</ol>
+<h3 id="播放功能制作"><a href="#播放功能制作" class="headerlink" title="播放功能制作"></a>播放功能制作</h3><ol>
+<li>采用vuex，想法是<ul>
+<li>将  正在播放的歌单、正播放的歌曲信息  放入状态管理</li>
+<li>将  切换歌曲、切换歌单、添加歌曲入播放列表  放入mutations属性</li>
+<li>因为请求用的api和传回的参数不尽相同，因此其他组件调用上述mutations属性时，需自行请求完数据，再进行调用并传递处理好的参数，而不是在vuex中进行请求</li>
+</ul>
+</li>
+<li>实现<ul>
+<li>从$store中调出当前即将播放的歌曲id，请求得到URL送入audio标签播放</li>
+<li>获取audio的dom，为dom贴上timeupdate事件，以获取已播放时长以及歌曲时长，并绑定到拖动条上</li>
+</ul>
+</li>
+</ol>
+<h3 id="碰到的问题"><a href="#碰到的问题" class="headerlink" title="碰到的问题"></a>碰到的问题</h3><ol>
+<li>有些样式在当前页面内无法更改，甚至添加！important也没用，如何区分，如何变更<ul>
+<li>有些样式可以在global.css中定义并更改，并在HTML文件中引入，原因尚需思考,如圆角按钮和方角按钮，一个需要！impotant才能改padding，一个不需要</li>
+</ul>
+</li>
+<li>出现相同path，不同query的路由请求，却不触发跳转的情况<ul>
+<li>在标签内添加：key属性，<router-view :key="$route.path"></router-view>，原因是添加key后，vue会强制不复用这个router-view，只要key发生一点变化，都强制执行created和mounted钩子</li>
+<li>音乐播放列表出现子路由变换，父组件却重新渲染的问题，原因在于上一条的：key属性，只要key值发生变动，父组件就会重新渲染，此时path中已经换了，导致无法根据path中的params按需（如，根据id找到歌单信息）请求静态资源，导致父组件渲染失败，之前的解决方法是让子路由带上父组件的params，之后通过导入单独组件而不用路由的方式解决</li>
+</ul>
+</li>
+<li>音乐清单页面需要优化的点是切换内容区域的不同模块时，都只需要加载一边，不要切一次加载一次，因此需要父子组件传值，或者用vuex</li>
+<li>出现全局污染</li>
+<li>添加歌单按钮出现不同浏览器不同显示效果问题</li>
+<li>el-input键入事件无法生效，通过在事件后添加.native可以解决<ul>
+<li>.native是vue用于监听组件根元素的原生事件，用于自定义组件</li>
+</ul>
+</li>
+<li>在搜索页面搜索时会不刷新页面，通过在路由跳转时加上一串随机数字或者关键字，配合路由占位符中:key强制刷新</li>
+<li>父子组件传值时，父组件还在获取数据中，给子组件传递了空值或默认值，即使后面更新了，子组件却已经渲染出了空值并不再渲染后面传来的真数据，可以通过watch监视解决此问题</li>
+<li>打包过程中出现No module factory available for dependency type: CssDependency，之前并未出现该错误，目前没有发现原因<ul>
+<li>将vue.config.js中的css.extract设置为false，禁止打包过程中抽取css到单独的css文件中，而是内联到js中并动态注入，一般开发环境中默认的就是false，因为设置为true与css热重载不兼容</li>
+<li>所以第二种方法就是vue-cli中的build那一栏，将参数的环境设置为development</li>
+</ul>
+</li>
+</ol>
+<h3 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h3><ol>
+<li>为了减少请求次数，父组件一次性在请求完自身页面数据并显示完后，再一次性请求完子组件数据，并通过父子组件传值传递数据，如歌单页面与其子路由清单页面利用父子组件传值</li>
+<li>vuex中存储正在播放的歌单，以及正在播放的歌曲id，为保证歌单中不出现重复的歌曲，利用同一首歌不能有同样的id的特点，采用set对象创建歌单</li>
+<li>home页面的播放组件从vuex中获取正在播放的歌曲，播放并展示相关歌曲信息图片</li>
+<li>切换歌曲时，将set对象Array.from()转换为数组，通过在这个数组中查找正在播放的歌曲id所在位置，按需（传入的步长，如-1是上一首，1是下一首）切换歌曲</li>
+<li>往歌单中添加歌曲时，同上，先转换为数组，再找当前播放，然后用splice(index+1,0,addsong)在当前播放的歌曲后面插入要添加的歌曲</li>
+</ol>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://LuyiaGoe.cn" rel="external nofollow noreferrer">LuyiaGoe</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://LuyiaGoe.cn">https://LuyiaGoe.cn</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://LuyiaGoe.cn" target="_blank">LuyiaGoe</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="../../../../../tags/Vue/">
+                                    <span class="chip bg-color">Vue</span>
+                                </a>
+                            
+                                <a href="../../../../../tags/Project/">
+                                    <span class="chip bg-color">Project</span>
+                                </a>
+                            
+                                <a href="../../../../../tags/VueX/">
+                                    <span class="chip bg-color">VueX</span>
+                                </a>
+                            
+                                <a href="../../../../../tags/Vue-Router/">
+                                    <span class="chip bg-color">Vue-Router</span>
+                                </a>
+                            
+                                <a href="../../../../../tags/ElementUI/">
+                                    <span class="chip bg-color">ElementUI</span>
+                                </a>
+                            
+                                <a href="../../../../../tags/axios/">
+                                    <span class="chip bg-color">axios</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="../../../../06/01/React/%E9%9A%8F%E6%89%8B%E8%AE%B0%E9%A1%B9%E7%9B%AE%E5%B0%8F%E7%BB%93/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/medias/featureimages/5.jpg" class="responsive-img" alt="随手记项目小结">
+                        
+                        <span class="card-title">随手记项目小结</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            项目描述
+这是一个具备记录、保存、编辑账单的记账本应用，你可以在里面看到日周月年的流水记录，可以看到本月支出分类前三数据，还能看到自己资产金额，也可以根据不同的条件查询账单流水，还可以通过设置本月预算来辅助进行开销规划。
+
+展示页
+准备工作
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-01
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="../../../../../categories/Front-End/" class="post-category">
+                                    Front-End
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="../../../../../tags/Front-End/">
+                        <span class="chip bg-color">Front-End</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="../../React/React/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/medias/featureimages/5.jpg" class="responsive-img" alt="React学习笔记">
+                        
+                        <span class="card-title">React学习笔记</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            React.js - 第1天1. React简介
+React 起源于 Facebook 的内部项目，因为该公司对市场上所有 JavaScript MVC 框架，都不满意，就决定自己写一套，用来架设 Instagram（照片交友） 的网站。做
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-16
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="../../../../../categories/React-React-Route/" class="post-category">
+                                    React React-Route
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="../../../../../tags/React/">
+                        <span class="chip bg-color">React</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('50')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: LuyiaGoe&#39;s Blog<br />'
+            + '文章作者: LuyiaGoe<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归LuyiaGoe所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+
+<!-- 代码块复制 -->
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="6639929126"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="https://LuyiaGoe.cn" target="_blank">LuyiaGoe</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "7";
+                    var startDate = "10";
+                    var startHour = "16";
+                    var startMinute = "22";
+                    var startSecond = "19";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/LuyiaGoe" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:641512449@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=641512449" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 641512449" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/materialize/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/aos/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/LuyiaGoe/LuyiaGoe.github.io/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
