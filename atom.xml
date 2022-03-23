@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://luyiagoe.cn/"/>
-  <updated>2021-06-02T00:34:14.558Z</updated>
+  <updated>2022-03-23T12:32:34.906Z</updated>
   <id>https://luyiagoe.cn/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>开发前端 CLI 脚手架思路解析</title>
+    <link href="https://luyiagoe.cn/2022/03/23/JavaScript/%E5%BC%80%E5%8F%91%E5%89%8D%E7%AB%AF%20CLI%20%E8%84%9A%E6%89%8B%E6%9E%B6%E6%80%9D%E8%B7%AF%E8%A7%A3%E6%9E%90/"/>
+    <id>https://luyiagoe.cn/2022/03/23/JavaScript/%E5%BC%80%E5%8F%91%E5%89%8D%E7%AB%AF%20CLI%20%E8%84%9A%E6%89%8B%E6%9E%B6%E6%80%9D%E8%B7%AF%E8%A7%A3%E6%9E%90/</id>
+    <published>2022-03-23T12:02:33.000Z</published>
+    <updated>2022-03-23T12:32:34.906Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Front-End" scheme="https://LuyiaGoe.cn/categories/Front-End/"/>
+    
+    
+      <category term="Front-End" scheme="https://LuyiaGoe.cn/tags/Front-End/"/>
+    
+      <category term="Cli" scheme="https://LuyiaGoe.cn/tags/Cli/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Web Component</title>
+    <link href="https://luyiagoe.cn/2021/11/22/%E5%BE%85%E5%88%B6%E4%BD%9C/Web-Component/"/>
+    <id>https://luyiagoe.cn/2021/11/22/%E5%BE%85%E5%88%B6%E4%BD%9C/Web-Component/</id>
+    <published>2021-11-22T12:41:05.000Z</published>
+    <updated>2022-03-23T12:02:06.915Z</updated>
+    
+    <summary type="html">
+    
+      Web Component
+    
+    </summary>
+    
+    
+      <category term="Front-End" scheme="https://LuyiaGoe.cn/categories/Front-End/"/>
+    
+    
+      <category term="JavaScript" scheme="https://LuyiaGoe.cn/tags/JavaScript/"/>
+    
+      <category term="Front-End" scheme="https://LuyiaGoe.cn/tags/Front-End/"/>
+    
+      <category term="Gaia" scheme="https://LuyiaGoe.cn/tags/Gaia/"/>
+    
+      <category term="Component" scheme="https://LuyiaGoe.cn/tags/Component/"/>
+    
+  </entry>
   
   <entry>
     <title>随手记项目小结</title>
@@ -60,11 +116,11 @@
     
       <category term="VueX" scheme="https://LuyiaGoe.cn/tags/VueX/"/>
     
+      <category term="Vue-Router" scheme="https://LuyiaGoe.cn/tags/Vue-Router/"/>
+    
       <category term="ElementUI" scheme="https://LuyiaGoe.cn/tags/ElementUI/"/>
     
       <category term="axios" scheme="https://LuyiaGoe.cn/tags/axios/"/>
-    
-      <category term="Vue-Router" scheme="https://LuyiaGoe.cn/tags/Vue-Router/"/>
     
   </entry>
   
@@ -121,7 +177,7 @@
     <link href="https://luyiagoe.cn/2021/03/14/Webpack/Unable%20to%20preventDefault%20inside%20passive%20event%20listener%20due%20to%20target%20being%20treated%20as%20passive/"/>
     <id>https://luyiagoe.cn/2021/03/14/Webpack/Unable%20to%20preventDefault%20inside%20passive%20event%20listener%20due%20to%20target%20being%20treated%20as%20passive/</id>
     <published>2021-03-14T08:53:34.000Z</published>
-    <updated>2021-03-14T09:01:40.375Z</updated>
+    <updated>2021-03-14T09:01:42.000Z</updated>
     
     <summary type="html">
     
@@ -148,7 +204,7 @@
     <link href="https://luyiagoe.cn/2021/03/12/Webpack/webpack-URL-rules/"/>
     <id>https://luyiagoe.cn/2021/03/12/Webpack/webpack-URL-rules/</id>
     <published>2021-03-12T05:14:03.000Z</published>
-    <updated>2021-03-12T05:39:28.891Z</updated>
+    <updated>2021-03-12T05:39:30.000Z</updated>
     
     <summary type="html">
     
@@ -175,7 +231,7 @@
     <link href="https://luyiagoe.cn/2021/03/11/Vue/vue%20%E7%BB%99UI%E5%BA%93%E6%B7%BB%E5%8A%A0%E6%8C%89%E9%9C%80%E5%8A%A0%E8%BD%BD%E6%97%B6%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%9B%AE%E6%97%B6%20babel-preset-es2015%20%E6%8A%A5%E9%94%99/"/>
     <id>https://luyiagoe.cn/2021/03/11/Vue/vue%20%E7%BB%99UI%E5%BA%93%E6%B7%BB%E5%8A%A0%E6%8C%89%E9%9C%80%E5%8A%A0%E8%BD%BD%E6%97%B6%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%9B%AE%E6%97%B6%20babel-preset-es2015%20%E6%8A%A5%E9%94%99/</id>
     <published>2021-03-11T08:10:34.000Z</published>
-    <updated>2021-03-11T08:23:44.329Z</updated>
+    <updated>2021-03-11T08:23:46.000Z</updated>
     
     <summary type="html">
     
@@ -196,7 +252,7 @@
     <link href="https://luyiagoe.cn/2021/03/09/JavaScript/JavaScriptValueChange/"/>
     <id>https://luyiagoe.cn/2021/03/09/JavaScript/JavaScriptValueChange/</id>
     <published>2021-03-09T10:48:55.000Z</published>
-    <updated>2021-03-10T03:14:27.153Z</updated>
+    <updated>2021-03-10T03:14:28.000Z</updated>
     
     <summary type="html">
     
@@ -240,7 +296,7 @@
     <link href="https://luyiagoe.cn/2021/02/13/HTML&amp;CSS/CSSImport/"/>
     <id>https://luyiagoe.cn/2021/02/13/HTML&amp;CSS/CSSImport/</id>
     <published>2021-02-13T05:16:28.000Z</published>
-    <updated>2021-03-10T03:07:46.601Z</updated>
+    <updated>2021-03-10T03:07:48.000Z</updated>
     
     <summary type="html">
     
@@ -261,7 +317,7 @@
     <link href="https://luyiagoe.cn/2020/12/21/JavaScript/JavaScriptIframeCrossOrigin/"/>
     <id>https://luyiagoe.cn/2020/12/21/JavaScript/JavaScriptIframeCrossOrigin/</id>
     <published>2020-12-21T10:47:50.000Z</published>
-    <updated>2021-03-10T03:07:46.601Z</updated>
+    <updated>2021-03-10T03:07:48.000Z</updated>
     
     <summary type="html">
     
@@ -284,7 +340,7 @@
     <link href="https://luyiagoe.cn/2020/11/11/Node/NodePackage.json/"/>
     <id>https://luyiagoe.cn/2020/11/11/Node/NodePackage.json/</id>
     <published>2020-11-11T05:16:28.000Z</published>
-    <updated>2021-03-10T03:15:35.404Z</updated>
+    <updated>2021-03-10T03:15:36.000Z</updated>
     
     <summary type="html">
     
@@ -359,7 +415,7 @@
     <link href="https://luyiagoe.cn/2020/10/09/JavaScript/JavaScriptStringBuffer/"/>
     <id>https://luyiagoe.cn/2020/10/09/JavaScript/JavaScriptStringBuffer/</id>
     <published>2020-10-09T10:18:06.000Z</published>
-    <updated>2021-03-10T03:07:46.616Z</updated>
+    <updated>2021-03-10T03:07:48.000Z</updated>
     
     <summary type="html">
     
@@ -380,7 +436,7 @@
     <link href="https://luyiagoe.cn/2020/09/21/JavaScript/JavaScripitFunctionTail-Call/"/>
     <id>https://luyiagoe.cn/2020/09/21/JavaScript/JavaScripitFunctionTail-Call/</id>
     <published>2020-09-21T08:25:19.000Z</published>
-    <updated>2021-03-10T03:07:46.601Z</updated>
+    <updated>2021-03-10T03:07:48.000Z</updated>
     
     <summary type="html">
     
@@ -401,7 +457,7 @@
     <link href="https://luyiagoe.cn/2020/09/14/JavaScript/JavaScriptClosure/"/>
     <id>https://luyiagoe.cn/2020/09/14/JavaScript/JavaScriptClosure/</id>
     <published>2020-09-14T05:16:28.000Z</published>
-    <updated>2021-03-10T03:13:57.249Z</updated>
+    <updated>2021-03-10T03:13:58.000Z</updated>
     
     <summary type="html">
     
@@ -422,7 +478,7 @@
     <link href="https://luyiagoe.cn/2020/09/10/JavaScript/JavaScriptRegExp/"/>
     <id>https://luyiagoe.cn/2020/09/10/JavaScript/JavaScriptRegExp/</id>
     <published>2020-09-10T00:00:00.000Z</published>
-    <updated>2021-03-10T03:07:46.616Z</updated>
+    <updated>2021-03-10T03:07:48.000Z</updated>
     
     <summary type="html">
     
@@ -435,48 +491,6 @@
     
     
       <category term="RegExp" scheme="https://LuyiaGoe.cn/tags/RegExp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript逻辑运算符“&amp;&amp;”和“||”短路原则的应用</title>
-    <link href="https://luyiagoe.cn/2020/08/30/JavaScript/JavaScriptLogicCompute/"/>
-    <id>https://luyiagoe.cn/2020/08/30/JavaScript/JavaScriptLogicCompute/</id>
-    <published>2020-08-30T10:48:55.000Z</published>
-    <updated>2021-03-10T03:07:46.601Z</updated>
-    
-    <summary type="html">
-    
-      JavaScript中逻辑运算符的介绍，短路原则的介绍与应用
-    
-    </summary>
-    
-    
-      <category term="JavaScript" scheme="https://LuyiaGoe.cn/categories/JavaScript/"/>
-    
-    
-      <category term="Operator" scheme="https://LuyiaGoe.cn/tags/Operator/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript设计模式之发布&amp;订阅模式</title>
-    <link href="https://luyiagoe.cn/2020/08/27/JavaScript/JavaScriptObseverMode/"/>
-    <id>https://luyiagoe.cn/2020/08/27/JavaScript/JavaScriptObseverMode/</id>
-    <published>2020-08-27T10:48:55.000Z</published>
-    <updated>2021-03-10T03:07:46.601Z</updated>
-    
-    <summary type="html">
-    
-      面试官：你能说说发布&amp;amp;订阅模式和观察者模式有什么区别吗？懵逼了吗？来，上车~
-    
-    </summary>
-    
-    
-      <category term="JavaScript" scheme="https://LuyiaGoe.cn/categories/JavaScript/"/>
-    
-    
-      <category term="Patterns" scheme="https://LuyiaGoe.cn/tags/Patterns/"/>
     
   </entry>
   
