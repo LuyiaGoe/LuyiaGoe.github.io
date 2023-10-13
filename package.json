@@ -15,10 +15,10 @@
     "post": "hexo new post"
   },
   "hexo": {
-    "version": "4.2.1"
+    "version": "7.0.0-rc2"
   },
   "dependencies": {
-    "hexo": "^4.2.1",
+    "hexo": "^7.0.0-rc2",
     "hexo-deployer-git": "^2.1.0",
     "hexo-filter-github-emojis": "^2.1.0",
     "hexo-generator-archive": "^1.0.0",
