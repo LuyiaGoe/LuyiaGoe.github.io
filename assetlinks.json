@@ -1,0 +1,26 @@
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "io.github.luyiagoe.twa",
+            "sha256_cert_fingerprints": [
+                "E5:7C:3B:C3:4A:25:EB:40:F0:4D:3F:08:B2:D6:2D:34:BE:F7:26:60:05:C0:62:34:D3:19:1E:5E:D2:09:EF:65"
+            ]
+        }
+    },
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.huawei.browser",
+            "sha256_cert_fingerprints": [
+                "E5:7C:3B:C3:4A:25:EB:40:F0:4D:3F:08:B2:D6:2D:34:BE:F7:26:60:05:C0:62:34:D3:19:1E:5E:D2:09:EF:65"
+            ]
+        }
+    }
+]
